@@ -2,7 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="79d0eec6-8999-43cb-a63b-1a613c64d276" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/ConsoleApplication1/Lab1AdditionalTask.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ConsoleApplication1/TTriangle.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab1AdditionalTask/Lab1AdditionalTask/TTriangle.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.ConsoleApplication1/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ConsoleApplication1/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ConsoleApplication1/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ConsoleApplication1/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConsoleApplication1/ConsoleApplication1.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/ConsoleApplication1/ConsoleApplication1.csproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ConsoleApplication1/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ConsoleApplication1/Program.cs" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -18,13 +23,19 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/04DC7BAA-E88C-476E-A5BF-B7668D57F21C/ED/Array.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/04DC7BAA-E88C-476E-A5BF-B7668D57F21C/94/Number.Parsing.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/ConsoleApplication1/Program.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/ConsoleApplication1/TTriangle.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/ConsoleApplication1/Properties/AssemblyInfo.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/ConsoleApplication1/Lab1AdditionalTask.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/04DC7BAA-E88C-476E-A5BF-B7668D57F21C/82/Math.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/ConsoleApplication1/Program.cs" />
+        <option value="$PROJECT_DIR$/ConsoleApplication1/TTriangle.cs" />
+        <option value="$PROJECT_DIR$/ConsoleApplication1/Additional/Lab1AdditionalTask.cs" />
+        <option value="$PROJECT_DIR$/TTriangle.cs" />
+        <option value="$PROJECT_DIR$/ConsoleApplication1/Lab1AdditionalTask.cs" />
       </list>
     </option>
   </component>
@@ -81,8 +92,16 @@
       <workItem from="1600017706447" duration="456000" />
       <workItem from="1600089538935" duration="3178000" />
       <workItem from="1600260054687" duration="5006000" />
-      <workItem from="1600355718369" duration="1799000" />
+      <workItem from="1600355718369" duration="3746000" />
     </task>
+    <task id="LOCAL-00001" summary="lab1 implemented">
+      <created>1600358452269</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1600358452271</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -105,6 +124,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="LOCAL_CHANGES_DETAILS_PREVIEW_SHOWN" value="true" />
+    <MESSAGE value="lab1 implemented" />
+    <option name="LAST_COMMIT_MESSAGE" value="lab1 implemented" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -115,26 +136,13 @@
         </breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/ConsoleApplication1/Program.cs</url>
-          <line>107</line>
-          <properties documentPath="$PROJECT_DIR$/ConsoleApplication1/Program.cs" initialLine="94">
-            <startOffsets>
-              <option value="3350" />
-            </startOffsets>
-            <endOffsets>
-              <option value="3387" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/ConsoleApplication1/Program.cs</url>
           <line>163</line>
           <properties documentPath="$PROJECT_DIR$/ConsoleApplication1/Program.cs" initialLine="151">
             <startOffsets>
-              <option value="5164" />
+              <option value="5110" />
             </startOffsets>
             <endOffsets>
-              <option value="5165" />
+              <option value="5111" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="7" />

@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 
 namespace ConsoleApplication1
 {
@@ -24,7 +23,7 @@ namespace ConsoleApplication1
             {
                 throw new Exception("Ліва границя має бути більше 0");
             }
-            
+
 
             Console.WriteLine("Введіть праву границю інтервалу");
             int b = Int32.Parse(Console.ReadLine());
@@ -75,6 +74,7 @@ namespace ConsoleApplication1
             {
                 Console.Write(el + "\t");
             }
+
             Console.WriteLine();
         }
 
@@ -100,7 +100,7 @@ namespace ConsoleApplication1
                 Console.WriteLine();
             }
         }
-        
+
         private static void PrintJaggedArray(int[][] c)
         {
             for (int i = 0; i < c.Length; i++)
@@ -113,13 +113,12 @@ namespace ConsoleApplication1
                 Console.WriteLine();
             }
         }
-        
+
         private static void FillJaggedArray(int totalElements, int leftRandomLimit, int rightRandomLimit, ref int[][] c)
         {
             int writtenEl = 0;
             int writtenRows;
-            Random random = new Random();
-            for (int i = 0;;i++)
+            for (int i = 0;; i++)
             {
                 int n;
                 int[] arr;
@@ -127,16 +126,17 @@ namespace ConsoleApplication1
                 {
                     n = totalElements - writtenEl;
                     arr = new int[n];
-                    RandomFillArray(leftRandomLimit, rightRandomLimit,ref arr);
+                    RandomFillArray(leftRandomLimit, rightRandomLimit, ref arr);
                     ResizeIfNeeded(ref c, i);
                     c[i] = arr;
                     writtenRows = i + 1;
                     break;
                 }
 
+                Random random = new Random();
                 n = random.Next(leftRandomLimit, rightRandomLimit);
                 arr = new int[n];
-                RandomFillArray(leftRandomLimit, rightRandomLimit,ref arr);
+                RandomFillArray(leftRandomLimit, rightRandomLimit, ref arr);
 
                 writtenEl += arr.Length;
                 ResizeIfNeeded(ref c, i);

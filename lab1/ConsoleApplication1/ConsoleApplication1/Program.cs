@@ -14,7 +14,8 @@ namespace ConsoleApplication1
             //його за зростанням, після чого переписати його елементи у квадратну матрицю Q по рядках.
             Console.WriteLine("Введіть к-ть елементів в матриці (має бути квадратом натурального числа)");
             int n = Int32.Parse(Console.ReadLine());
-            int sqrtFromN = ValidateNumberOfMatrixElements(n);
+            ValidateNumberOfMatrixElements(n);
+            int sqrtFromN = (int) Math.Sqrt(n);
 
             Console.WriteLine("Введіть ліву границю інтервалу (має бути більше 0)");
             int a = Int32.Parse(Console.ReadLine());
@@ -23,8 +24,7 @@ namespace ConsoleApplication1
             {
                 throw new Exception("Ліва границя має бути більше 0");
             }
-
-
+            
             Console.WriteLine("Введіть праву границю інтервалу");
             int b = Int32.Parse(Console.ReadLine());
 
@@ -163,15 +163,13 @@ namespace ConsoleApplication1
             }
         }
 
-        private static int ValidateNumberOfMatrixElements(int n)
+        private static void ValidateNumberOfMatrixElements(int n)
         {
             double sqrt = Math.Sqrt(n);
-            if (sqrt % 2 != 0 && sqrt % 3 != 0)
+            if (sqrt % 1 != 0)
             {
                 throw new Exception("К-ть елементів в матриці має бути квадратом натурального числа!");
             }
-
-            return (int) sqrt;
         }
     }
 }

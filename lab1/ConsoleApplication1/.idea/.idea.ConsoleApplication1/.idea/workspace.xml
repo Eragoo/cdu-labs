@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="79d0eec6-8999-43cb-a63b-1a613c64d276" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ConsoleApplication1/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ConsoleApplication1/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConsoleApplication1/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ConsoleApplication1/Program.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Lab1AdditionalTask/.idea/.idea.Lab1AdditionalTask/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab1AdditionalTask/.idea/.idea.Lab1AdditionalTask/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Lab1AdditionalTask/Lab1AdditionalTask/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab1AdditionalTask/Lab1AdditionalTask/Program.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Lab1AdditionalTask/Lab1AdditionalTask/TTriangle.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab1AdditionalTask/Lab1AdditionalTask/TTriangle.cs" afterDir="false" />
@@ -27,11 +28,11 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/ConsoleApplication1/Program.cs" />
         <option value="$PROJECT_DIR$/ConsoleApplication1/TTriangle.cs" />
         <option value="$PROJECT_DIR$/ConsoleApplication1/Additional/Lab1AdditionalTask.cs" />
         <option value="$PROJECT_DIR$/TTriangle.cs" />
         <option value="$PROJECT_DIR$/ConsoleApplication1/Lab1AdditionalTask.cs" />
+        <option value="$PROJECT_DIR$/ConsoleApplication1/Program.cs" />
       </list>
     </option>
   </component>
@@ -89,7 +90,7 @@
       <workItem from="1600089538935" duration="3178000" />
       <workItem from="1600260054687" duration="5006000" />
       <workItem from="1600355718369" duration="4770000" />
-      <workItem from="1600425527052" duration="223000" />
+      <workItem from="1600425527052" duration="520000" />
     </task>
     <task id="LOCAL-00001" summary="lab1 implemented">
       <created>1600358452269</created>
@@ -139,19 +140,6 @@
           <properties exception="System.Threading.ThreadAbortException" displayValue="System.Threading.ThreadAbortException" />
           <option name="timeStamp" value="1" />
         </breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/ConsoleApplication1/Program.cs</url>
-          <line>163</line>
-          <properties documentPath="$PROJECT_DIR$/ConsoleApplication1/Program.cs" initialLine="151">
-            <startOffsets>
-              <option value="5110" />
-            </startOffsets>
-            <endOffsets>
-              <option value="5111" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="7" />
-        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>

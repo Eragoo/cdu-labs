@@ -5,6 +5,7 @@
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ConsoleApplication1/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ConsoleApplication1/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Lab1AdditionalTask/.idea/.idea.Lab1AdditionalTask/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab1AdditionalTask/.idea/.idea.Lab1AdditionalTask/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Lab1AdditionalTask/Lab1AdditionalTask/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab1AdditionalTask/Lab1AdditionalTask/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab1AdditionalTask/Lab1AdditionalTask/TTriangle.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab1AdditionalTask/Lab1AdditionalTask/TTriangle.cs" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -87,7 +88,8 @@
       <workItem from="1600017706447" duration="456000" />
       <workItem from="1600089538935" duration="3178000" />
       <workItem from="1600260054687" duration="5006000" />
-      <workItem from="1600355718369" duration="4400000" />
+      <workItem from="1600355718369" duration="4770000" />
+      <workItem from="1600425527052" duration="223000" />
     </task>
     <task id="LOCAL-00001" summary="lab1 implemented">
       <created>1600358452269</created>

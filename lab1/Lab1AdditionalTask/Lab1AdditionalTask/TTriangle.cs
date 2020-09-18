@@ -4,11 +4,11 @@ namespace Additional
 {
     public class TTriangle
     {
-        private int a;
-        private int b;
-        private int c;
+        private double a;
+        private double b;
+        private double c;
 
-        public TTriangle(int a, int b, int c)
+        public TTriangle(double a, double b, double c)
         {
             ValidateTriangleSides(a, b, c);
             this.a = a;
@@ -16,51 +16,51 @@ namespace Additional
             this.c = c;
         }
 
-        public int GetA()
+        public double GetA()
         {
             return a;
         }
 
-        public int GetB()
+        public double GetB()
         {
             return b;
         }
         
-        public int GetC()
+        public double GetC()
         {
             return c;
         }
 
-        public void SetA(int a)
+        public void SetA(double a)
         {
             ValidateTriangleSides(a, b, c);
             this.a = a;
         }
         
-        public void SetB(int b)
+        public void SetB(double b)
         {
             ValidateTriangleSides(a, b, c);
             this.b = b;
         }
         
-        public void SetC(int c)
+        public void SetC(double c)
         {
             ValidateTriangleSides(a, b, c);
             this.c = c;
         }
 
-        public long GetPerimeter()
+        public double GetPerimeter()
         {
             return a + b + c;
         }
 
         public double GetArea()
         {
-            long p = GetPerimeter() / 2;
+            double p = GetPerimeter() / 2;
             return Math.Sqrt(p * (p - a) * (p - b) * (p - c));
         }
         
-        private static void ValidateTriangleSides(int a, int b, int c)
+        private static void ValidateTriangleSides(double a, double b, double c)
         {
             if (a < 0 || b < 0 || c < 0)
             {

@@ -5,6 +5,7 @@
       <change beforePath="$PROJECT_DIR$/../ConsoleApplication1/.idea/.idea.ConsoleApplication1/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ConsoleApplication1/.idea/.idea.ConsoleApplication1/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Lab1AdditionalTask/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Lab1AdditionalTask/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Lab1AdditionalTask/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Lab1AdditionalTask/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab1AdditionalTask/TTriangle.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Lab1AdditionalTask/TTriangle.cs" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -22,6 +23,7 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
+        <option value="$PROJECT_DIR$/Lab1AdditionalTask/TTriangle.cs" />
         <option value="$PROJECT_DIR$/Lab1AdditionalTask/Program.cs" />
       </list>
     </option>
@@ -98,21 +100,32 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1600360421120</updated>
-      <workItem from="1600360423827" duration="999000" />
+      <workItem from="1600360423827" duration="1541000" />
+      <workItem from="1600425528328" duration="223000" />
     </task>
+    <task id="LOCAL-00001" summary="implemented">
+      <created>1600361650641</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1600361650641</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
-  <component name="UnityProjectConfiguration" hasMinimizedUI="null" />
+  <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
   <component name="UnityUnitTestConfiguration" currentTestLauncher="NUnit" />
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
@@ -120,6 +133,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="LOCAL_CHANGES_DETAILS_PREVIEW_SHOWN" value="true" />
+    <MESSAGE value="implemented" />
+    <option name="LAST_COMMIT_MESSAGE" value="implemented" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

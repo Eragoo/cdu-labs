@@ -61,9 +61,9 @@ namespace Lab1AdditionalTask
         {
             long expected = 3;
             TTriangle t = new TTriangle(1, 1, 1);
-            long actual = t.GetPerimeter();
+            double actual = t.GetPerimeter();
 
-            if (expected == actual)
+            if (Math.Abs(expected - actual) < 0.0001)
             {
                 Console.WriteLine("✅ TestTriangleGetPerimeter passed");
             }
@@ -79,7 +79,7 @@ namespace Lab1AdditionalTask
             TTriangle t = new TTriangle(3, 4, 5);
             double actual = t.GetArea();
 
-            if (expected == actual)
+            if (Math.Abs(expected - actual) < 0.0001)
             {
                 Console.WriteLine("✅ TestTriangleGetArea passed");
             }

@@ -3,10 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="79d0eec6-8999-43cb-a63b-1a613c64d276" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ConsoleApplication1/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ConsoleApplication1/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ConsoleApplication1/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ConsoleApplication1/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lab1AdditionalTask/.idea/.idea.Lab1AdditionalTask/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab1AdditionalTask/.idea/.idea.Lab1AdditionalTask/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lab1AdditionalTask/Lab1AdditionalTask/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab1AdditionalTask/Lab1AdditionalTask/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lab1AdditionalTask/Lab1AdditionalTask/TTriangle.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab1AdditionalTask/Lab1AdditionalTask/TTriangle.cs" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -90,7 +86,8 @@
       <workItem from="1600089538935" duration="3178000" />
       <workItem from="1600260054687" duration="5006000" />
       <workItem from="1600355718369" duration="4770000" />
-      <workItem from="1600425527052" duration="520000" />
+      <workItem from="1600425527052" duration="554000" />
+      <workItem from="1600761735358" duration="13000" />
     </task>
     <task id="LOCAL-00001" summary="lab1 implemented">
       <created>1600358452269</created>
@@ -106,7 +103,14 @@
       <option name="project" value="LOCAL" />
       <updated>1600360545759</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="bugfix">
+      <created>1600426073682</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1600426073682</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -131,7 +135,8 @@
     <option name="LOCAL_CHANGES_DETAILS_PREVIEW_SHOWN" value="true" />
     <MESSAGE value="lab1 implemented" />
     <MESSAGE value="refactoring" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactoring" />
+    <MESSAGE value="bugfix" />
+    <option name="LAST_COMMIT_MESSAGE" value="bugfix" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

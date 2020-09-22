@@ -16,6 +16,8 @@ namespace part1
             TestMatrixInitWithIncorrectString();
             TestMatrixInitWithCorrectString();
             TestMatrixInitWithAnotherMatrixToStringMethod();
+            TestAddMatrix();
+            TestMultiplyMatrix();
         }
 
         private static void TestMatrixCorrectInit()
@@ -148,7 +150,7 @@ namespace part1
 
             Console.WriteLine("TestMatrixInitWithIncorrectString FAILED");
         }
-        
+
         private static void TestMatrixInitWithCorrectString()
         {
             try
@@ -164,12 +166,12 @@ namespace part1
 
             Console.WriteLine("TestMatrixInitWithCorrectString PASSED");
         }
-        
+
         private static void TestMatrixInitWithAnotherMatrixToStringMethod()
         {
             try
             {
-                MyMatrix matrix = new MyMatrix(new double[,]{{4,2,3},{4,5,6}});
+                MyMatrix matrix = new MyMatrix(new double[,] {{4, 2, 3}, {4, 5, 6}});
                 MyMatrix newMatrix = new MyMatrix(matrix.ToString());
                 if (newMatrix.ToString().Equals(matrix.ToString()))
                 {
@@ -184,6 +186,61 @@ namespace part1
             {
                 Console.WriteLine("TestMatrixInitWithAnotherMatrixToStringMethod FAILED");
             }
+        }
+
+        private static void TestAddMatrix()
+        {
+            MyMatrix matrix1 = new MyMatrix(new double[,] {{4, 2, 3}, {4, 5, 6}});
+            MyMatrix matrix2 = new MyMatrix(new double[,] {{1, 3, 5}, {2, 7, 10}});
+            MyMatrix matrix3 = matrix1 + matrix2;
+            bool isFailed = false;
+
+            for (int i = 0; i < matrix1.GetHeight(); i++)
+            {
+                if (isFailed)
+                {
+                    break;
+                }
+
+                for (int j = 0; j < matrix1.GetWidth(); j++)
+                {
+                    if (!IsTwoDoubleEqual(matrix3.Elements[i, j], matrix1.Elements[i, j] + matrix2.Elements[i, j]))
+                    {
+                        isFailed = true;
+                        break;
+                    }
+                }
+            }
+
+            if (isFailed)
+            {
+                Console.WriteLine("TestAddSameMatrix FAILED");
+            }
+            else
+            {
+                Console.WriteLine("TestAddSameMatrix PASSED");
+            }
+        }
+        
+        private static void TestMultiplyMatrix()
+        {
+            MyMatrix matrix1 = new MyMatrix(new double[,] {{4, 2}, {4, 5}});
+            MyMatrix matrix2 = new MyMatrix(new double[,] {{1, 3, 5}, {2, 7, 10}});
+            MyMatrix matrix3 = matrix1 * matrix2;
+            MyMatrix result = new MyMatrix(new double[,]{{8,26,40},{14,47,70}});
+            if (matrix3.ToString().Equals(result.ToString()))
+            {
+                Console.WriteLine("TestMultiplyMatrix PASSED");
+            }
+            else
+            {
+                Console.WriteLine("TestMultiplyMatrix FAILED");
+            }
+        }
+
+        private static bool IsTwoDoubleEqual(double a, double b)
+        {
+            return Math.Abs(a - b) < 0.001;
         }
     }
 }

@@ -82,8 +82,8 @@ namespace part1
                 {
                     elements[i, j] = arr[j];
                 }
+
                 prevLength = currLength;
-                i++;
             }
         }
 
@@ -145,6 +145,65 @@ namespace part1
         public int GetHeight()
         {
             return height;
+        }
+
+        public static MyMatrix operator +(MyMatrix matrix1, MyMatrix matrix2)
+        {
+            AssertMatrixHaveSameSize(matrix1, matrix2);
+
+            double[,] arr = new double[matrix1.height, matrix1.width];
+            for (int i = 0; i < matrix2.height; i++)
+            {
+                for (int j = 0; j < matrix2.width; j++)
+                {
+                    arr[i, j] = matrix1.elements[i, j] + matrix2.elements[i, j];
+                }
+            }
+
+            return new MyMatrix(arr);
+        }
+
+        private static void AssertMatrixHaveSameSize(MyMatrix matrix1, MyMatrix matrix2)
+        {
+            if (matrix1.height != matrix2.height && matrix1.width != matrix2.width)
+            {
+                throw new MyMatrixException("Matrix must have same size");
+            }
+        }
+
+        public double[,] Elements => elements;
+
+        public double GetElement(int i, int j)
+        {
+            return elements[i, j];
+        }
+        
+        public void SetElement(int i, int j, double el)
+        {
+            elements[i, j] = el;
+        }
+
+        public static MyMatrix operator *(MyMatrix matrix1, MyMatrix matrix2)
+        {
+            if (matrix1.width != matrix2.height)
+            {
+                throw new MyMatrixException("Matrix1 height must be equal matrix2 width");
+            }
+
+            double[,] arr = new double[matrix1.height, matrix2.width];
+            for (var i = 0; i < matrix1.height; i++)
+            {
+                for (var j = 0; j < matrix2.width; j++)
+                {
+                    arr[i, j] = 0;
+
+                    for (var k = 0; k < matrix1.width; k++)
+                    {
+                        arr[i, j] += matrix1.elements[i, k] * matrix2.elements[k, j];
+                    }
+                }
+            }
+            return new MyMatrix(arr);
         }
     }
 }

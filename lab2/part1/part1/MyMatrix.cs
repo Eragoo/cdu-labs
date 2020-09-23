@@ -205,5 +205,24 @@ namespace part1
             }
             return new MyMatrix(arr);
         }
+
+        private double[,] GetTransposedArray()
+        {
+            double[,] arr = new double[width, height];
+            for (int i = 0; i < width; i++)
+            {
+                for (int j = 0; j < height; j++)
+                {
+                    arr[i, j] = elements[j, i];
+                }
+            }
+
+            return arr;
+        }
+
+        public MyMatrix TransposeMe()
+        {
+            return new MyMatrix(GetTransposedArray());
+        }
     }
 }

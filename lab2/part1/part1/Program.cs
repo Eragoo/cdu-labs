@@ -18,6 +18,7 @@ namespace part1
             TestMatrixInitWithAnotherMatrixToStringMethod();
             TestAddMatrix();
             TestMultiplyMatrix();
+            TestTransposeMe();
         }
 
         private static void TestMatrixCorrectInit()
@@ -235,6 +236,21 @@ namespace part1
             else
             {
                 Console.WriteLine("TestMultiplyMatrix FAILED");
+            }
+        }
+
+        private static void TestTransposeMe()
+        {
+            MyMatrix actual = new MyMatrix(new double[,]{{1,2},{3,4}}).TransposeMe();
+            MyMatrix expected = new MyMatrix(new double[,]{{1,3},{2,4}});
+
+            if (actual.ToString().Equals(expected.ToString()))
+            {
+                Console.WriteLine("TestTransposeMe PASSED");
+            }
+            else
+            {
+                Console.WriteLine("TestTransposeMe FAILED");
             }
         }
 

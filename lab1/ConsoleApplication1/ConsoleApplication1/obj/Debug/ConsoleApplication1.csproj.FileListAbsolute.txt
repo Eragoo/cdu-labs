@@ -1,0 +1,5 @@
+/Users/macbook/Documents/programming/university/cdu-labs-oop/lab1/ConsoleApplication1/ConsoleApplication1/bin/Debug/ConsoleApplication1.exe
+/Users/macbook/Documents/programming/university/cdu-labs-oop/lab1/ConsoleApplication1/ConsoleApplication1/bin/Debug/ConsoleApplication1.pdb
+/Users/macbook/Documents/programming/university/cdu-labs-oop/lab1/ConsoleApplication1/ConsoleApplication1/obj/Debug/ConsoleApplication1.csprojAssemblyReference.cache
+/Users/macbook/Documents/programming/university/cdu-labs-oop/lab1/ConsoleApplication1/ConsoleApplication1/obj/Debug/ConsoleApplication1.exe
+/Users/macbook/Documents/programming/university/cdu-labs-oop/lab1/ConsoleApplication1/ConsoleApplication1/obj/Debug/ConsoleApplication1.pdb

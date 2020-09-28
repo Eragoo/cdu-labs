@@ -1,0 +1,5 @@
+/Users/macbook/Documents/programming/university/cdu-labs-oop/lab1/Lab1AdditionalTask/Lab1AdditionalTask/bin/Debug/Lab1AdditionalTask.exe
+/Users/macbook/Documents/programming/university/cdu-labs-oop/lab1/Lab1AdditionalTask/Lab1AdditionalTask/bin/Debug/Lab1AdditionalTask.pdb
+/Users/macbook/Documents/programming/university/cdu-labs-oop/lab1/Lab1AdditionalTask/Lab1AdditionalTask/obj/Debug/Lab1AdditionalTask.csprojAssemblyReference.cache
+/Users/macbook/Documents/programming/university/cdu-labs-oop/lab1/Lab1AdditionalTask/Lab1AdditionalTask/obj/Debug/Lab1AdditionalTask.exe
+/Users/macbook/Documents/programming/university/cdu-labs-oop/lab1/Lab1AdditionalTask/Lab1AdditionalTask/obj/Debug/Lab1AdditionalTask.pdb

@@ -2,6 +2,18 @@ using System;
 
 namespace part2
 {
+    //    Описати клас, який містять вказані поля і методи.
+//        Клас “прямокутний трикутник ” – TRTriangle
+//            Поля  для зберігання довжин катетів;
+//        Методи  конструктор без параметрів, конструктор з параметрами, конструктор копіювання;
+//
+//        override public string ToString();
+//        введення/виведення даних;
+//        визначення площі;
+//        визначення периметру;
+//        порівняння з іншим трикутником (лише на рівність/нерівність);
+//        перевантаження операторів * (множення сторін на деяке число; забезпечити, щоб
+//        домноження могло відбуватися хоч як «число*трикутник», хоч як «трикутник*число»).
     public class TRTriangle : IComparable
     {
         protected double a;
@@ -12,6 +24,13 @@ namespace part2
         {
         }
 
+        public TRTriangle(TRTriangle triangle)
+        {
+            a = triangle.a;
+            b = triangle.b;
+            c = triangle.c;
+        }
+
         public TRTriangle(double a, double b, double c)
         {
             ValidateTriangleSides(a, b, c);
@@ -20,14 +39,14 @@ namespace part2
             this.c = c;
         }
 
-        public double GetPerimeter()
+        public double GetBasePerimeter()
         {
             return a + b + c;
         }
 
         public double GetArea()
         {
-            double p = GetPerimeter() / 2;
+            double p = GetBasePerimeter() / 2;
             return Math.Sqrt(p * (p - a) * (p - b) * (p - c));
         }
 
@@ -107,7 +126,7 @@ namespace part2
                 triangle.b * num,
                 triangle.c * num);
         }
-        
+
         public static TRTriangle operator *(double num, TRTriangle triangle)
         {
             return new TRTriangle(triangle.a * num,

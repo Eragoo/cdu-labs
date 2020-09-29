@@ -4,26 +4,51 @@ namespace part2
 {
     internal class Program
     {
-        //Описати клас, який містять вказані поля і методи.
-//        Клас “прямокутний трикутник ” – TRTriangle
-//            Поля  для зберігання довжин катетів;
-//        Методи  конструктор без параметрів, конструктор з параметрами, конструктор копіювання;
-//
-//        override public string ToString();
-//        введення/виведення даних;
-//        визначення площі;
-//        визначення периметру;
-//        порівняння з іншим трикутником (лише на рівність/нерівність);
-//        перевантаження операторів * (множення сторін на деяке число; забезпечити, щоб
-//        домноження могло відбуватися хоч як «число*трикутник», хоч як «трикутник*число»).
         public static void Main(string[] args)
         {
+            Console.WriteLine("\r\nTRIANGLE TESTS: \r\n");
             TestInitIncorrectTriangle();
             TestAreaTriangle();
             TestInitCorrectTriangle();
             TestCompareEqualTriangles();
             TestMultiplyTriangles();
+
+            Console.WriteLine("\r\nPYRAMID TESTS: \r\n");
+            TestInitIncorrectPyramid();
+            TestPyramidArea();
         }
+
+        private static void TestInitIncorrectPyramid()
+        {
+            try
+            {
+                TRPiramid t = new TRPiramid(10, 2, 3, -10);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("TestInitIncorrectPyramid PASSED");
+                return;
+            }
+
+            Console.WriteLine("TestInitIncorrectPyramid FAILED");
+        }
+
+        private static void TestPyramidArea()
+        {
+            TRPiramid t = new TRPiramid(3, 4, 5, 10);
+            double actual = t.GetArea();
+            double expected = 19.9999;
+
+            if (IsDoubleEquals(actual, expected))
+            {
+                Console.WriteLine("TestPyramidArea PASSED");
+            }
+            else
+            {
+                Console.WriteLine("TestPyramidArea FAILED");
+            }
+        }
+
 
         private static void TestInitIncorrectTriangle()
         {
@@ -89,7 +114,7 @@ namespace part2
                 Console.WriteLine("IsDoubleEquals FAILED");
             }
         }
-        
+
         private static void TestMultiplyTriangles()
         {
             TRTriangle t1 = new TRTriangle(3, 4, 5);
@@ -105,6 +130,6 @@ namespace part2
             {
                 Console.WriteLine("TestMultiplyTriangles FAILED");
             }
-        }    
+        }
     }
 }

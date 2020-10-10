@@ -40,6 +40,8 @@
   <ItemGroup>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TRCEPiramid.cs" />
+    <Compile Include="TRCPiramid.cs" />
     <Compile Include="TRPiramid.cs" />
     <Compile Include="TRTriangle.cs" />
   </ItemGroup>

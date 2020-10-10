@@ -1,4 +1,5 @@
 using System;
+using System.Security.Policy;
 
 namespace part2
 {
@@ -6,7 +7,7 @@ namespace part2
 //    перпендикулярне до катетів і опускається у прямий кут трикутника) на основі класу
 //    TRTriangle. Додати поле висоти піраміди, метод знаходження об’єму піраміди та
 //    перевизначити відповідні методи.
-    
+
     public class TRPiramid : TRTriangle
     {
         protected double h;
@@ -33,5 +34,43 @@ namespace part2
         {
             return "TRPyramid : {a = " + a + "; b = " + b + "; c = " + c + "; h = " + h + "}";
         }
+
+        private static bool IsDoubleEquals(double actual, double expected)
+        {
+            return Math.Abs(actual - expected) < 0.001;
+        }
+
+        public override bool Equals(object obj)
+        {
+            if (obj == null)
+            {
+                return false;
+            }
+
+            if (obj == this)
+            {
+                return true;
+            }
+
+            TRPiramid p = (TRPiramid) obj;
+
+            if (IsDoubleEquals(a, p.a) &&
+                IsDoubleEquals(b, p.b) &&
+                IsDoubleEquals(c, p.c) &&
+                IsDoubleEquals(h, p.h))
+            {
+                return true;
+            }
+
+            return false;
+        }
+
+        public override int GetHashCode()
+        {
+            return h.GetHashCode() + a.GetHashCode() + b.GetHashCode() +  c.GetHashCode();
+        }
+        
+        
+        
     }
 }

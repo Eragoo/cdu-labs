@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace part2
 {
@@ -16,6 +17,14 @@ namespace part2
             Console.WriteLine("\r\nPYRAMID TESTS: \r\n");
             TestInitIncorrectPyramid();
             TestPyramidArea();
+            TestEqualsInHashSet();
+            TestDifferenceInHashSet();
+            
+            Console.WriteLine("\r\nPYRAMID WITH COLOR TESTS: \r\n");
+            TestColorEqualsInHashSet();
+            
+            Console.WriteLine("\r\nPYRAMID WITH COLOR TESTS (Equals overriden ): \r\n");
+            TestColorEqualsInHashSetEqualsOverriden();
         }
 
         private static void TestInitIncorrectPyramid()
@@ -129,6 +138,86 @@ namespace part2
             else
             {
                 Console.WriteLine("TestMultiplyTriangles FAILED");
+            }
+        }
+        
+        private static void TestEqualsInHashSet()
+        {
+            TRPiramid t1 = new TRPiramid(3, 4, 5, 1);
+            TRPiramid t2 = new TRPiramid(3, 4, 5, 1);
+            HashSet<TRPiramid> set = new HashSet<TRPiramid>();
+            set.Add(t1);
+            set.Add(t2);
+
+            if (set.Count == 1)
+            {
+                Console.WriteLine("TestEqualsInHashSet PASSED");
+            }
+            else
+            {
+                Console.WriteLine("TestEqualsInHashSet FAILED");
+            }
+        }
+        
+        
+        private static void TestDifferenceInHashSet()
+        {
+            TRPiramid t1 = new TRPiramid(3, 4, 5, 1);
+            TRPiramid t2 = new TRPiramid(3, 4, 5, 2);
+            HashSet<TRPiramid> set = new HashSet<TRPiramid>();
+            set.Add(t1);
+            set.Add(t2);
+
+            if (set.Count == 1)
+            {
+                Console.WriteLine("TestDifferenceInHashSet FAILED");
+            }
+            else
+            {
+                Console.WriteLine("TestDifferenceInHashSet PASSED");
+            }
+        }
+        
+        private static void TestColorEqualsInHashSet()
+        {
+            TRCPiramid t1 = new TRCPiramid(3, 4, 5, 2, "red");
+            TRCPiramid t2 = new TRCPiramid(3, 4, 5, 2, "green");
+            TRCPiramid t3 = new TRCPiramid(3, 4, 5, 2, "blue");
+
+            HashSet<TRPiramid> set = new HashSet<TRPiramid>();
+            set.Add(t1);
+            set.Add(t2);
+            set.Add(t3);
+
+            //Fails because of equals() method
+            if (set.Count == 1)
+            {
+                Console.WriteLine("TestColorEqualsInHashSet FAILED");
+            }
+            else
+            {
+                Console.WriteLine("TestColorEqualsInHashSet PASSED");
+            }
+        }
+        private static void TestColorEqualsInHashSetEqualsOverriden()
+        {
+            TRCEPiramid t1 = new TRCEPiramid(3, 4, 5, 2, "red");
+            TRCEPiramid t2 = new TRCEPiramid(3, 4, 5, 2, "green");
+            TRCEPiramid t3 = new TRCEPiramid(3, 4, 5, 2, "blue");
+
+            HashSet<TRCEPiramid> set = new HashSet<TRCEPiramid>();
+            set.Add(t1);
+            set.Add(t2);
+            set.Add(t3);
+
+            if (set.Count == 1)
+            {
+                Console.WriteLine("TestColorEqualsInHashSetEqualsOverriden FAILED");
+            }
+            else if (set.Count == 3)
+            {
+                
+                Console.WriteLine("TestColorEqualsInHashSetEqualsOverriden PASSED");
             }
         }
     }

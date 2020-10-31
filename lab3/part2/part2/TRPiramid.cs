@@ -68,9 +68,7 @@ namespace part2
         public override int GetHashCode()
         {
             return h.GetHashCode() + a.GetHashCode() + b.GetHashCode() +  c.GetHashCode();
-        }
-        
-        
-        
+}      
+
     }
 }

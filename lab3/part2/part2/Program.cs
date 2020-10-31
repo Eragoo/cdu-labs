@@ -7,7 +7,11 @@ namespace part2
     {
         public static void Main(string[] args)
         {
-            Console.WriteLine("\r\nTRIANGLE TESTS: \r\n");
+            
+            
+
+
+                Console.WriteLine("\r\nTRIANGLE TESTS: \r\n");
             TestInitIncorrectTriangle();
             TestAreaTriangle();
             TestInitCorrectTriangle();

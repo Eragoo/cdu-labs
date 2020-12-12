@@ -1,0 +1,6 @@
+/home/ykukhol/RiderProjects/cdu-labs/interfaces/interfaces/obj/Debug/interfaces.csprojAssemblyReference.cache
+/home/ykukhol/RiderProjects/cdu-labs/interfaces/interfaces/obj/Debug/interfaces.csproj.CoreCompileInputs.cache
+/home/ykukhol/RiderProjects/cdu-labs/interfaces/interfaces/bin/Debug/interfaces.exe
+/home/ykukhol/RiderProjects/cdu-labs/interfaces/interfaces/bin/Debug/interfaces.pdb
+/home/ykukhol/RiderProjects/cdu-labs/interfaces/interfaces/obj/Debug/interfaces.exe
+/home/ykukhol/RiderProjects/cdu-labs/interfaces/interfaces/obj/Debug/interfaces.pdb

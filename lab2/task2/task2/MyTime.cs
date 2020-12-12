@@ -16,6 +16,7 @@ namespace task2
         {
             return new MyTime(hour, minute, second);
         }
+
         public MyTime(int hour, int minute, int second)
         {
             ValidateInputParams(hour, minute, second);
@@ -29,6 +30,7 @@ namespace task2
             second = sec % SEC_IN_MIN;
             hour = sec / (SEC_IN_MIN * SEC_IN_MIN) % 24;
             minute = sec % (SEC_IN_MIN * SEC_IN_MIN) / SEC_IN_MIN;
+            ValidateInputParams(hour, minute, second);
         }
 
         public int TimeSinceMidnight()
@@ -64,23 +66,27 @@ namespace task2
 
         public static String WhatLesson(MyTime t)
         {
-            if (t.IsBetween(MyTime.from(8,0,0), MyTime.from(9,20,0)))
+            if (t.IsBetween(MyTime.from(8, 0, 0), MyTime.from(9, 20, 0)))
             {
                 return "This is 1 Lecture";
             }
-            if (t.IsBetween(MyTime.from(9,40,0), MyTime.from(11,0,0)))
+
+            if (t.IsBetween(MyTime.from(9, 40, 0), MyTime.from(11, 0, 0)))
             {
                 return "This is 2 Lecture";
             }
-            if (t.IsBetween(MyTime.from(11,20,0), MyTime.from(12,40,0)))
+
+            if (t.IsBetween(MyTime.from(11, 20, 0), MyTime.from(12, 40, 0)))
             {
                 return "This is 3 Lecture";
             }
-            if (t.IsBetween(MyTime.from(13,0,0), MyTime.from(14,20,0)))
+
+            if (t.IsBetween(MyTime.from(13, 0, 0), MyTime.from(14, 20, 0)))
             {
                 return "This is 4 Lecture";
             }
-            if (t.IsBetween(MyTime.from(14,40,0), MyTime.from(16,0,0)))
+
+            if (t.IsBetween(MyTime.from(14, 40, 0), MyTime.from(16, 0, 0)))
             {
                 return "This is 5 Lecture";
             }
@@ -92,12 +98,7 @@ namespace task2
         {
             int m1 = end.GetSecondsFromMidnight() - GetSecondsFromMidnight();
             int m2 = GetSecondsFromMidnight() - start.GetSecondsFromMidnight();
-
-            if (m1 >= 0 && m2 >= 0)
-            {
-                return true;
-            }
-            return false;
+            return m1 >= 0 && m2 >= 0;
         }
 
         public static MyTime operator -(MyTime t1, MyTime t2)
@@ -126,15 +127,18 @@ namespace task2
 
         public override bool Equals(object obj)
         {
-            if (obj == this)
+            if (obj != null)
             {
-                return true;
-            }
+                if (obj == this)
+                {
+                    return true;
+                }
 
-            MyTime t = (MyTime) obj;
-            if (t.hour == hour && t.minute == minute && t.second == second)
-            {
-                return true;
+                MyTime t = (MyTime) obj;
+                if (t.hour == hour && t.minute == minute && t.second == second)
+                {
+                    return true;
+                }
             }
 
             return false;

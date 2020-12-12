@@ -8,7 +8,7 @@ namespace part1
         private double[,] elements;
         private int height;
         private int width;
-
+        
         public MyMatrix(double[,] elements)
         {
             if (elements.Length > 0)
@@ -41,7 +41,7 @@ namespace part1
 
         public MyMatrix(MyMatrix matrix)
         {
-            elements = matrix.elements;
+            elements = (double[,]) matrix.elements.Clone();
             width = matrix.width;
             height = matrix.height;
         }
@@ -181,6 +181,18 @@ namespace part1
         public void SetElement(int i, int j, double el)
         {
             elements[i, j] = el;
+        }
+        
+        public double this[int i, int j]
+        {
+            get
+            {
+                return elements[i, j];
+            }
+            set
+            {
+                elements[i, j] = value;
+            }
         }
 
         public static MyMatrix operator *(MyMatrix matrix1, MyMatrix matrix2)

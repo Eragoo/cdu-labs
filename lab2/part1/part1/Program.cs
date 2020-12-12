@@ -58,6 +58,12 @@ namespace part1
             double[,] arr = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};
             MyMatrix matrix = new MyMatrix(arr);
             MyMatrix newMatrix = new MyMatrix(matrix);
+
+            matrix[1, 1] = 13;
+            
+            Console.WriteLine(newMatrix);
+
+
             if (matrix.GetHeight() == newMatrix.GetHeight() && matrix.GetWidth() == newMatrix.GetWidth())
             {
                 Console.WriteLine("TestMatrixInitWithAnotherMatrix PASSED");
@@ -205,7 +211,7 @@ namespace part1
 
                 for (int j = 0; j < matrix1.GetWidth(); j++)
                 {
-                    if (!IsTwoDoubleEqual(matrix3.Elements[i, j], matrix1.Elements[i, j] + matrix2.Elements[i, j]))
+                    if (!IsTwoDoubleEqual(matrix3[i, j], matrix1[i, j] + matrix2[i, j]))
                     {
                         isFailed = true;
                         break;

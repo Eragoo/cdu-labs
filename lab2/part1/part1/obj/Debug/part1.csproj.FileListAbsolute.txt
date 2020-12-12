@@ -3,3 +3,9 @@
 /Users/macbook/Documents/programming/university/cdu-labs-oop/lab2/part1/part1/obj/Debug/part1.csprojAssemblyReference.cache
 /Users/macbook/Documents/programming/university/cdu-labs-oop/lab2/part1/part1/obj/Debug/part1.exe
 /Users/macbook/Documents/programming/university/cdu-labs-oop/lab2/part1/part1/obj/Debug/part1.pdb
+/home/ykukhol/RiderProjects/cdu-labs/lab2/part1/part1/bin/Debug/part1.exe
+/home/ykukhol/RiderProjects/cdu-labs/lab2/part1/part1/bin/Debug/part1.pdb
+/home/ykukhol/RiderProjects/cdu-labs/lab2/part1/part1/obj/Debug/part1.csprojAssemblyReference.cache
+/home/ykukhol/RiderProjects/cdu-labs/lab2/part1/part1/obj/Debug/part1.csproj.CoreCompileInputs.cache
+/home/ykukhol/RiderProjects/cdu-labs/lab2/part1/part1/obj/Debug/part1.exe
+/home/ykukhol/RiderProjects/cdu-labs/lab2/part1/part1/obj/Debug/part1.pdb

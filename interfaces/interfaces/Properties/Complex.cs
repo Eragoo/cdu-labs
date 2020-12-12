@@ -13,7 +13,13 @@ namespace interfaces.Properties
             this.re = re;
             this.im = im;
         }
-
+        
+        public Complex(Complex c)
+        {
+            this.re = c.re;
+            this.im = c.im;
+        }
+        
         public Complex Add(Complex that)
         {
             return new Complex(re + that.re, im + that.im);
@@ -45,7 +51,19 @@ namespace interfaces.Properties
 
         public override string ToString()
         {
-            return re + "+" + im + "i";
+            String sign = im < 0 ? "" : "+";  
+            return re + sign + im + "i";
         }
+        
+        public double GetIm()              
+        {                                         
+            return im;                         
+        }                                         
+                                            
+        public double GetRe()                
+        {                                         
+            return re;                           
+        }                                         
+
     }
 }

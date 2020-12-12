@@ -3,7 +3,7 @@ using System.Numerics;
 
 namespace interfaces
 {
-    public class Frac : IMyNumber<Frac>
+    public class Frac : IMyNumber<Frac>, IComparable<Frac>
     {
         protected BigInteger nom;
         protected BigInteger denom;
@@ -19,6 +19,13 @@ namespace interfaces
             this.nom = nom / gcd;
             this.denom = denom / gcd;
         }
+        
+        public Frac(Frac f)                                    
+        {                                                                                
+            ValidateFrac(f);
+            this.nom = f.nom;                                                        
+            this.denom = f.denom;                                                    
+        }                                                                                
 
         public Frac Add(Frac b)
         {
@@ -32,7 +39,7 @@ namespace interfaces
         public Frac Subtract(Frac b)
         {
             BigInteger newFracNom = nom * b.denom - denom * b.nom;  
-            BigInteger newFracDenom = denom * b.nom;                
+            BigInteger newFracDenom = denom * b.denom;                
             Frac newFrac = new Frac(newFracNom, newFracDenom);     
             ValidateFrac(newFrac);                                 
             return newFrac;                                        
@@ -62,6 +69,23 @@ namespace interfaces
             {
                 throw new DivideByZeroException("Frac denom must be non zero");
             }
+        }
+
+        public BigInteger GetDenom()
+        {
+            return denom;
+        }
+
+        public BigInteger GetNom()
+        {
+            return nom;
+        }
+
+        public int CompareTo(Frac other)
+        {
+            BigInteger a = nom / denom;
+            BigInteger b = other.nom / other.denom;
+            return a.CompareTo(b);
         }
 
         public override string ToString()

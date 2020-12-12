@@ -22,34 +22,16 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="19f75a1e-128e-4791-8c50-f5cf60c7e75b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/interfaces/Frac.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/interfaces/IMyNumber.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/interfaces/Properties/Complex.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/interfaces/Util.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/interfaces/bin/Debug/interfaces.exe" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/interfaces/bin/Debug/interfaces.pdb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/interfaces/obj/Debug/.NETFramework,Version=v4.5.AssemblyAttributes.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/interfaces/obj/Debug/.NETFramework,Version=v4.8.AssemblyAttributes.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/interfaces/obj/Debug/interfaces.csproj.CoreCompileInputs.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/interfaces/obj/Debug/interfaces.csproj.FileListAbsolute.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/interfaces/obj/Debug/interfaces.csprojAssemblyReference.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/interfaces/obj/Debug/interfaces.exe" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/interfaces/obj/Debug/interfaces.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab2/part1/.idea/.idea.part1/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../lab2/part1/.idea/.idea.part1/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab2/part1/.idea/.idea.part1/.idea/projectSettingsUpdater.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../lab2/part1/.idea/.idea.part1/.idea/projectSettingsUpdater.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab2/part1/part1/MyMatrix.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../lab2/part1/part1/MyMatrix.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab2/part1/part1/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../lab2/part1/part1/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab2/part1/part1/bin/Debug/part1.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../lab2/part1/part1/bin/Debug/part1.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab2/part1/part1/bin/Debug/part1.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../lab2/part1/part1/bin/Debug/part1.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab2/part1/part1/obj/Debug/part1.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../lab2/part1/part1/obj/Debug/part1.csproj.FileListAbsolute.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab2/part1/part1/obj/Debug/part1.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../lab2/part1/part1/obj/Debug/part1.csprojAssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab2/part1/part1/obj/Debug/part1.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../lab2/part1/part1/obj/Debug/part1.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab2/part1/part1/obj/Debug/part1.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../lab2/part1/part1/obj/Debug/part1.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab2/task2/.idea/.idea.task2/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../lab2/task2/.idea/.idea.task2/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab2/task2/.idea/.idea.task2/.idea/projectSettingsUpdater.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../lab2/task2/.idea/.idea.task2/.idea/projectSettingsUpdater.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab2/task2/task2/MyTime.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../lab2/task2/task2/MyTime.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab2/task2/task2/obj/Debug/task2.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../lab2/task2/task2/obj/Debug/task2.csprojAssemblyReference.cache" afterDir="false" />
+    <list default="true" id="19f75a1e-128e-4791-8c50-f5cf60c7e75b" name="Default Changelist" comment="Initial part of task finished (tests still needed)">
+      <change beforePath="$PROJECT_DIR$/../2" beforeDir="false" afterPath="$PROJECT_DIR$/../2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.interfaces/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.interfaces/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/interfaces/Frac.cs" beforeDir="false" afterPath="$PROJECT_DIR$/interfaces/Frac.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/interfaces/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/interfaces/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/interfaces/Properties/Complex.cs" beforeDir="false" afterPath="$PROJECT_DIR$/interfaces/Properties/Complex.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/interfaces/bin/Debug/interfaces.exe" beforeDir="false" afterPath="$PROJECT_DIR$/interfaces/bin/Debug/interfaces.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/interfaces/bin/Debug/interfaces.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/interfaces/bin/Debug/interfaces.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/interfaces/obj/Debug/interfaces.exe" beforeDir="false" afterPath="$PROJECT_DIR$/interfaces/obj/Debug/interfaces.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/interfaces/obj/Debug/interfaces.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/interfaces/obj/Debug/interfaces.pdb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,14 +41,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/0C0A22EA-FF07-4B5D-BB73-28C4BF11C838/1a/ba1dd08a/BigInteger.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../lab2/part1/part1/obj/Debug/.NETFramework,Version=v4.7.2.AssemblyAttributes.cs" root0="SKIP_HIGHLIGHTING" />
+  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/interfaces/IMyNumber.cs" />
-        <option value="$PROJECT_DIR$/interfaces/Properties/Complex.cs" />
-        <option value="$PROJECT_DIR$/interfaces/Program.cs" />
-        <option value="$PROJECT_DIR$/interfaces/Frac.cs" />
         <option value="$PROJECT_DIR$/interfaces/Util.cs" />
+        <option value="$PROJECT_DIR$/interfaces/Properties/Complex.cs" />
+        <option value="$PROJECT_DIR$/interfaces/Frac.cs" />
+        <option value="$PROJECT_DIR$/interfaces/Program.cs" />
       </list>
     </option>
   </component>
@@ -114,8 +100,23 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1607785952991</updated>
-      <workItem from="1607785957435" duration="5629000" />
+      <workItem from="1607785957435" duration="7711000" />
     </task>
+    <task id="LOCAL-00001" summary="Initial part of task finished (tests still needed)">
+      <created>1607791865993</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1607791865993</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Initial part of task finished (tests still needed)">
+      <created>1607791879314</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1607791879314</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -137,24 +138,26 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+    <MESSAGE value="Initial part of task finished (tests still needed)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Initial part of task finished (tests still needed)" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1807" height="278" key="GridCell.Tab.0.bottom" timestamp="1607791250498">
+    <state width="1807" height="278" key="GridCell.Tab.0.bottom" timestamp="1607793192336">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state width="1807" height="278" key="GridCell.Tab.0.bottom/1920.0.1920.1080/0.27.1920.1053@1920.0.1920.1080" timestamp="1607791250498" />
-    <state width="1807" height="278" key="GridCell.Tab.0.center" timestamp="1607791250498">
+    <state width="1807" height="278" key="GridCell.Tab.0.bottom/1920.0.1920.1080/0.27.1920.1053@1920.0.1920.1080" timestamp="1607793192336" />
+    <state width="1807" height="278" key="GridCell.Tab.0.center" timestamp="1607793192336">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state width="1807" height="278" key="GridCell.Tab.0.center/1920.0.1920.1080/0.27.1920.1053@1920.0.1920.1080" timestamp="1607791250498" />
-    <state width="1807" height="278" key="GridCell.Tab.0.left" timestamp="1607791250498">
+    <state width="1807" height="278" key="GridCell.Tab.0.center/1920.0.1920.1080/0.27.1920.1053@1920.0.1920.1080" timestamp="1607793192336" />
+    <state width="1807" height="278" key="GridCell.Tab.0.left" timestamp="1607793192336">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state width="1807" height="278" key="GridCell.Tab.0.left/1920.0.1920.1080/0.27.1920.1053@1920.0.1920.1080" timestamp="1607791250498" />
-    <state width="1807" height="278" key="GridCell.Tab.0.right" timestamp="1607791250498">
+    <state width="1807" height="278" key="GridCell.Tab.0.left/1920.0.1920.1080/0.27.1920.1053@1920.0.1920.1080" timestamp="1607793192336" />
+    <state width="1807" height="278" key="GridCell.Tab.0.right" timestamp="1607793192336">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state width="1807" height="278" key="GridCell.Tab.0.right/1920.0.1920.1080/0.27.1920.1053@1920.0.1920.1080" timestamp="1607791250498" />
+    <state width="1807" height="278" key="GridCell.Tab.0.right/1920.0.1920.1080/0.27.1920.1053@1920.0.1920.1080" timestamp="1607793192336" />
     <state x="2508" y="287" key="Rider.ProjectTemplateDialog.Size" timestamp="1607785953038">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
@@ -167,5 +170,9 @@
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="2402" y="187" key="SettingsEditor/1920.0.1920.1080/0.27.1920.1053@1920.0.1920.1080" timestamp="1607786823587" />
+    <state x="2508" y="288" width="800" height="528" key="Vcs.Push.Dialog.v2" timestamp="1607791884762">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2508" y="288" width="800" height="528" key="Vcs.Push.Dialog.v2/1920.0.1920.1080/0.27.1920.1053@1920.0.1920.1080" timestamp="1607791884762" />
   </component>
 </project>

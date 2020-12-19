@@ -22,16 +22,8 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="19f75a1e-128e-4791-8c50-f5cf60c7e75b" name="Default Changelist" comment="Initial part of task finished (tests still needed)">
+    <list default="true" id="19f75a1e-128e-4791-8c50-f5cf60c7e75b" name="Default Changelist" comment="Added tests">
       <change beforePath="$PROJECT_DIR$/../2" beforeDir="false" afterPath="$PROJECT_DIR$/../2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.interfaces/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.interfaces/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/interfaces/Frac.cs" beforeDir="false" afterPath="$PROJECT_DIR$/interfaces/Frac.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/interfaces/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/interfaces/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/interfaces/Properties/Complex.cs" beforeDir="false" afterPath="$PROJECT_DIR$/interfaces/Properties/Complex.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/interfaces/bin/Debug/interfaces.exe" beforeDir="false" afterPath="$PROJECT_DIR$/interfaces/bin/Debug/interfaces.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/interfaces/bin/Debug/interfaces.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/interfaces/bin/Debug/interfaces.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/interfaces/obj/Debug/interfaces.exe" beforeDir="false" afterPath="$PROJECT_DIR$/interfaces/obj/Debug/interfaces.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/interfaces/obj/Debug/interfaces.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/interfaces/obj/Debug/interfaces.pdb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -100,7 +92,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1607785952991</updated>
-      <workItem from="1607785957435" duration="7711000" />
+      <workItem from="1607785957435" duration="8386000" />
     </task>
     <task id="LOCAL-00001" summary="Initial part of task finished (tests still needed)">
       <created>1607791865993</created>
@@ -116,7 +108,14 @@
       <option name="project" value="LOCAL" />
       <updated>1607791879314</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Added tests">
+      <created>1607793746778</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1607793746778</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -139,25 +138,26 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="Initial part of task finished (tests still needed)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Initial part of task finished (tests still needed)" />
+    <MESSAGE value="Added tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added tests" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1807" height="278" key="GridCell.Tab.0.bottom" timestamp="1607793192336">
+    <state width="1807" height="278" key="GridCell.Tab.0.bottom" timestamp="1607805881860">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state width="1807" height="278" key="GridCell.Tab.0.bottom/1920.0.1920.1080/0.27.1920.1053@1920.0.1920.1080" timestamp="1607793192336" />
-    <state width="1807" height="278" key="GridCell.Tab.0.center" timestamp="1607793192336">
+    <state width="1807" height="278" key="GridCell.Tab.0.bottom/1920.0.1920.1080/0.27.1920.1053@1920.0.1920.1080" timestamp="1607805881860" />
+    <state width="1807" height="278" key="GridCell.Tab.0.center" timestamp="1607805881860">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state width="1807" height="278" key="GridCell.Tab.0.center/1920.0.1920.1080/0.27.1920.1053@1920.0.1920.1080" timestamp="1607793192336" />
-    <state width="1807" height="278" key="GridCell.Tab.0.left" timestamp="1607793192336">
+    <state width="1807" height="278" key="GridCell.Tab.0.center/1920.0.1920.1080/0.27.1920.1053@1920.0.1920.1080" timestamp="1607805881860" />
+    <state width="1807" height="278" key="GridCell.Tab.0.left" timestamp="1607805881859">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state width="1807" height="278" key="GridCell.Tab.0.left/1920.0.1920.1080/0.27.1920.1053@1920.0.1920.1080" timestamp="1607793192336" />
-    <state width="1807" height="278" key="GridCell.Tab.0.right" timestamp="1607793192336">
+    <state width="1807" height="278" key="GridCell.Tab.0.left/1920.0.1920.1080/0.27.1920.1053@1920.0.1920.1080" timestamp="1607805881859" />
+    <state width="1807" height="278" key="GridCell.Tab.0.right" timestamp="1607805881860">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state width="1807" height="278" key="GridCell.Tab.0.right/1920.0.1920.1080/0.27.1920.1053@1920.0.1920.1080" timestamp="1607793192336" />
+    <state width="1807" height="278" key="GridCell.Tab.0.right/1920.0.1920.1080/0.27.1920.1053@1920.0.1920.1080" timestamp="1607805881860" />
     <state x="2508" y="287" key="Rider.ProjectTemplateDialog.Size" timestamp="1607785953038">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
@@ -170,9 +170,9 @@
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="2402" y="187" key="SettingsEditor/1920.0.1920.1080/0.27.1920.1053@1920.0.1920.1080" timestamp="1607786823587" />
-    <state x="2508" y="288" width="800" height="528" key="Vcs.Push.Dialog.v2" timestamp="1607791884762">
+    <state x="2508" y="288" width="800" height="528" key="Vcs.Push.Dialog.v2" timestamp="1607793751675">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state x="2508" y="288" width="800" height="528" key="Vcs.Push.Dialog.v2/1920.0.1920.1080/0.27.1920.1053@1920.0.1920.1080" timestamp="1607791884762" />
+    <state x="2508" y="288" width="800" height="528" key="Vcs.Push.Dialog.v2/1920.0.1920.1080/0.27.1920.1053@1920.0.1920.1080" timestamp="1607793751675" />
   </component>
 </project>

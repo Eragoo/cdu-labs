@@ -1,0 +1,6 @@
+/home/ykukhol/RiderProjects/cdu-labs/exceptions/exceptions/bin/Debug/exceptions.exe
+/home/ykukhol/RiderProjects/cdu-labs/exceptions/exceptions/bin/Debug/exceptions.pdb
+/home/ykukhol/RiderProjects/cdu-labs/exceptions/exceptions/obj/Debug/exceptions.csprojAssemblyReference.cache
+/home/ykukhol/RiderProjects/cdu-labs/exceptions/exceptions/obj/Debug/exceptions.csproj.CoreCompileInputs.cache
+/home/ykukhol/RiderProjects/cdu-labs/exceptions/exceptions/obj/Debug/exceptions.exe
+/home/ykukhol/RiderProjects/cdu-labs/exceptions/exceptions/obj/Debug/exceptions.pdb

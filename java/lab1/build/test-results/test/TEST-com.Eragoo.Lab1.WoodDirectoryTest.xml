@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.Eragoo.Lab1.WoodDirectoryTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2021-02-20T12:57:50" hostname="MacBook-Pro-yevhenii.local" time="0.049">
+  <properties/>
+  <testcase name="Add presented Wood should return prev value; New value shouldn't override old" classname="com.Eragoo.Lab1.WoodDirectoryTest" time="0.026"/>
+  <testcase name="Init directory with Wood and get it" classname="com.Eragoo.Lab1.WoodDirectoryTest" time="0.001"/>
+  <testcase name="Get value from empty directory should return null" classname="com.Eragoo.Lab1.WoodDirectoryTest" time="0.019"/>
+  <testcase name="Add not presented Wood should return null" classname="com.Eragoo.Lab1.WoodDirectoryTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

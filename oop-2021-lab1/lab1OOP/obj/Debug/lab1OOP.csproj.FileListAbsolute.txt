@@ -1,0 +1,9 @@
+C:\Users\yevhenii\Documents\Visual Studio 2015\Projects\lab1OOP\lab1OOP\bin\Debug\lab1OOP.exe.config
+C:\Users\yevhenii\Documents\Visual Studio 2015\Projects\lab1OOP\lab1OOP\bin\Debug\lab1OOP.exe
+C:\Users\yevhenii\Documents\Visual Studio 2015\Projects\lab1OOP\lab1OOP\bin\Debug\lab1OOP.pdb
+C:\Users\yevhenii\Documents\Visual Studio 2015\Projects\lab1OOP\lab1OOP\obj\Debug\lab1OOP.csprojResolveAssemblyReference.cache
+C:\Users\yevhenii\Documents\Visual Studio 2015\Projects\lab1OOP\lab1OOP\obj\Debug\lab1OOP.Form1.resources
+C:\Users\yevhenii\Documents\Visual Studio 2015\Projects\lab1OOP\lab1OOP\obj\Debug\lab1OOP.Properties.Resources.resources
+C:\Users\yevhenii\Documents\Visual Studio 2015\Projects\lab1OOP\lab1OOP\obj\Debug\lab1OOP.csproj.GenerateResource.Cache
+C:\Users\yevhenii\Documents\Visual Studio 2015\Projects\lab1OOP\lab1OOP\obj\Debug\lab1OOP.exe
+C:\Users\yevhenii\Documents\Visual Studio 2015\Projects\lab1OOP\lab1OOP\obj\Debug\lab1OOP.pdb

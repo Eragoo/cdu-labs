@@ -1,0 +1,6 @@
+C:\Users\yevhenii\Documents\cdu_labs\cdu_labs\lab2_common_task_2021\lab2_oop_commot_task_2021\lab2_oop_commot_task_2021\bin\Debug\lab2_oop_commot_task_2021.exe.config
+C:\Users\yevhenii\Documents\cdu_labs\cdu_labs\lab2_common_task_2021\lab2_oop_commot_task_2021\lab2_oop_commot_task_2021\bin\Debug\lab2_oop_commot_task_2021.exe
+C:\Users\yevhenii\Documents\cdu_labs\cdu_labs\lab2_common_task_2021\lab2_oop_commot_task_2021\lab2_oop_commot_task_2021\bin\Debug\lab2_oop_commot_task_2021.pdb
+C:\Users\yevhenii\Documents\cdu_labs\cdu_labs\lab2_common_task_2021\lab2_oop_commot_task_2021\lab2_oop_commot_task_2021\obj\Debug\lab2_oop_commot_task_2021.csprojResolveAssemblyReference.cache
+C:\Users\yevhenii\Documents\cdu_labs\cdu_labs\lab2_common_task_2021\lab2_oop_commot_task_2021\lab2_oop_commot_task_2021\obj\Debug\lab2_oop_commot_task_2021.exe
+C:\Users\yevhenii\Documents\cdu_labs\cdu_labs\lab2_common_task_2021\lab2_oop_commot_task_2021\lab2_oop_commot_task_2021\obj\Debug\lab2_oop_commot_task_2021.pdb

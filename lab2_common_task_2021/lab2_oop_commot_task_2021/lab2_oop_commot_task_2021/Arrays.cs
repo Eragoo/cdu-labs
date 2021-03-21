@@ -16,13 +16,14 @@ namespace lab2_oop_commot_task_2021
             this.arr = arr;
         }
 
-        public void printMatchesElements(MatchFunc<T> isMatch) {
+        public Arrays<T> printMatchesElements(MatchFunc<T> isMatch) {
             for(int i = 0; i < arr.Length; i++)
             {
                 if (isMatch(arr[i])) {
                     Console.WriteLine(arr[i].ToString());
                 }
             }
+            return this;
         }
     }
 }

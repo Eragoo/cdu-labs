@@ -1,0 +1,6 @@
+C:\Users\yevhenii\Documents\cdu_labs\cdu-abs\lab2_task1\lab2_task1\lab2_task1\bin\Debug\lab2_task1.exe.config
+C:\Users\yevhenii\Documents\cdu_labs\cdu-abs\lab2_task1\lab2_task1\lab2_task1\bin\Debug\lab2_task1.exe
+C:\Users\yevhenii\Documents\cdu_labs\cdu-abs\lab2_task1\lab2_task1\lab2_task1\bin\Debug\lab2_task1.pdb
+C:\Users\yevhenii\Documents\cdu_labs\cdu-abs\lab2_task1\lab2_task1\lab2_task1\obj\Debug\lab2_task1.csprojResolveAssemblyReference.cache
+C:\Users\yevhenii\Documents\cdu_labs\cdu-abs\lab2_task1\lab2_task1\lab2_task1\obj\Debug\lab2_task1.exe
+C:\Users\yevhenii\Documents\cdu_labs\cdu-abs\lab2_task1\lab2_task1\lab2_task1\obj\Debug\lab2_task1.pdb

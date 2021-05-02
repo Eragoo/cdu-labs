@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 using System.Collections.Generic;
-
+using System.Text.RegularExpressions;
 
 namespace lab3
 {
@@ -38,6 +38,31 @@ namespace lab3
         private void button1_Click(object sender, EventArgs e)
         {
             this.DialogResult = DialogResult.Abort;
+        }
+
+        private void royalti_Validating(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            try
+            {
+                int i = Int32.Parse(royalti.Text);
+            } catch(FormatException ex)
+            {
+                e.Cancel = true;
+                MessageBox.Show("Not valid royalti format!");
+            }
+        }
+
+        private void pageCount_Validating(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            try
+            {
+               int i = Int32.Parse(royalti.Text);
+            }
+            catch (FormatException ex)
+            {
+                e.Cancel = true;
+                MessageBox.Show("Not valid page count format!");
+            }
         }
     }
 }

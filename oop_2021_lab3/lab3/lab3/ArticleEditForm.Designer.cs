@@ -55,6 +55,7 @@
             this.royalti.Name = "royalti";
             this.royalti.Size = new System.Drawing.Size(196, 31);
             this.royalti.TabIndex = 3;
+            this.royalti.Validating += new System.ComponentModel.CancelEventHandler(this.royalti_Validating);
             // 
             // pageCount
             // 
@@ -63,6 +64,7 @@
             this.pageCount.Name = "pageCount";
             this.pageCount.Size = new System.Drawing.Size(196, 31);
             this.pageCount.TabIndex = 4;
+            this.pageCount.Validating += new System.ComponentModel.CancelEventHandler(this.pageCount_Validating);
             // 
             // label1
             // 

@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -35,6 +36,26 @@ namespace lab3
             author.setBirthDate(dateTimePicker1.Value);
 
             this.DialogResult = DialogResult.OK;
+        }
+
+        private void nameInput_Validating(object sender, CancelEventArgs e)
+        {
+            Regex regexGroupFormat = new Regex(@"[a-zA-Z]");
+            if (!regexGroupFormat.IsMatch(nameInput.Text))
+            {
+                e.Cancel = true;
+                MessageBox.Show("Not valid name format!");
+            }
+        }
+
+        private void surnameInput_Validating(object sender, CancelEventArgs e)
+        {
+            Regex regexGroupFormat = new Regex(@"[a-zA-Z]");
+            if (!regexGroupFormat.IsMatch(surnameInput.Text))
+            {
+                e.Cancel = true;
+                MessageBox.Show("Not valid surname format!");
+            }
         }
     }
 }

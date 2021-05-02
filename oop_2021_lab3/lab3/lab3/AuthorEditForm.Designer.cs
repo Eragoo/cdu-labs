@@ -45,6 +45,7 @@
             this.nameInput.Name = "nameInput";
             this.nameInput.Size = new System.Drawing.Size(196, 31);
             this.nameInput.TabIndex = 3;
+            this.nameInput.Validating += new System.ComponentModel.CancelEventHandler(this.nameInput_Validating);
             // 
             // surnameInput
             // 
@@ -53,6 +54,7 @@
             this.surnameInput.Name = "surnameInput";
             this.surnameInput.Size = new System.Drawing.Size(196, 31);
             this.surnameInput.TabIndex = 4;
+            this.surnameInput.Validating += new System.ComponentModel.CancelEventHandler(this.surnameInput_Validating);
             // 
             // nameLabel
             // 
@@ -115,7 +117,7 @@
             this.cancel.UseVisualStyleBackColor = true;
             this.cancel.Click += new System.EventHandler(this.cancel_Click);
             // 
-            // AuthorEditFormcs
+            // AuthorEditForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -128,7 +130,7 @@
             this.Controls.Add(this.nameLabel);
             this.Controls.Add(this.surnameInput);
             this.Controls.Add(this.nameInput);
-            this.Name = "AuthorEditFormcs";
+            this.Name = "AuthorEditForm";
             this.Text = "AuthorEditFormcs";
             this.ResumeLayout(false);
             this.PerformLayout();

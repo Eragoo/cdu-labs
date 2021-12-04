@@ -7,9 +7,6 @@ import java.util.Arrays;
 public abstract class МетодПокоординатногоСпуску {
     public abstract double f(double[] x);
 
-    public double[] xResp;
-    public double fxResp;
-
     public void solve(double[] x0, double eps, double lambda, double h0, int n) {
         double[] h = new double[x0.length];
         for (int i = 0; i < n; i++) {
@@ -17,13 +14,12 @@ public abstract class МетодПокоординатногоСпуску {
         }
 
         double[] x_int = Arrays.copyOf(x0, x0.length);
-        double[] x_ext = Arrays.copyOf(x_int, x_int.length);
 
         double xIntSubXEpxNorm;
         do {
-            double[] x;
+            double[] x_ext = Arrays.copyOf(x_int, x_int.length);
             for (int i = 0; i < n; i++) {
-                x = Arrays.copyOf(x_int, x_int.length);
+                double[] x = Arrays.copyOf(x_int, x_int.length);
                 double fx = f(x);
 
                 double[] y1 = Arrays.copyOf(x, x.length);
@@ -44,20 +40,12 @@ public abstract class МетодПокоординатногоСпуску {
                         h[i] = lambda * h[i];
                     }
 
-                } while (!(fx1 < fx || h[i] < (eps / 2)));
+                } while (!(fx1 < fx || h[i] < eps / 2d));
             }
 
             xIntSubXEpxNorm = new ArrayRealVector(x_int).subtract(new ArrayRealVector(x_ext)).getNorm();
         } while (!(xIntSubXEpxNorm < eps));
 
-        xResp = Arrays.copyOf(x_int, x_int.length);
-        fxResp = f(x_int);
-    }
-
-    @Override
-    public String toString() {
-        return "Метод Покоординатного Спуску   " +
-                "x : " + Arrays.toString(xResp) +
-                ", f(x) : " + fxResp;
+        System.out.print("Метод покоодинатного спуску    f(x) = " + f(x_int) + " x1 = " + x_int[0] + " x2 = " + x_int[1]);
     }
 }

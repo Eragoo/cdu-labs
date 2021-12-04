@@ -13,11 +13,11 @@ public class Lab6Test {
         double[] x0 = {0, 0};
         double eps = 0.0001;
         double h = 2;
-        double lambda = 0.5;
+        double lambda = 0.8;
 
         ПокоординатнийСпуск coo = new ПокоординатнийСпуск();
         coo.solve(Arrays.copyOf(x0, x0.length), eps, lambda, h, n);
-        System.out.println(coo.toString() + " n : " + fCallCount);
+        System.out.println(" n : " + fCallCount);
         fCallCount = 0;
         System.out.println();
 

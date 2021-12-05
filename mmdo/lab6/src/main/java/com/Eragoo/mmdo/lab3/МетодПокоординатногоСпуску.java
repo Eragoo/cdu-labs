@@ -5,6 +5,8 @@ import org.apache.commons.math3.linear.ArrayRealVector;
 import java.util.Arrays;
 
 public abstract class МетодПокоординатногоСпуску {
+    private int k = 0;
+
     public abstract double f(double[] x);
 
     public void solve(double[] x0, double eps, double lambda, double h0, int n) {
@@ -17,8 +19,10 @@ public abstract class МетодПокоординатногоСпуску {
 
         double xIntSubXEpxNorm;
         do {
+            k++;
             double[] x_ext = Arrays.copyOf(x_int, x_int.length);
             for (int i = 0; i < n; i++) {
+                k++;
                 double[] x = Arrays.copyOf(x_int, x_int.length);
                 double fx = f(x);
 
@@ -33,6 +37,7 @@ public abstract class МетодПокоординатногоСпуску {
 
                 double fx1;
                 do {
+                    k++;
                     x_int[i] = x[i] + (h[i] * z);
                     fx1 = f(x_int);
 
@@ -46,6 +51,6 @@ public abstract class МетодПокоординатногоСпуску {
             xIntSubXEpxNorm = new ArrayRealVector(x_int).subtract(new ArrayRealVector(x_ext)).getNorm();
         } while (!(xIntSubXEpxNorm < eps));
 
-        System.out.print("Метод покоодинатного спуску    f(x) = " + f(x_int) + " x1 = " + x_int[0] + " x2 = " + x_int[1]);
+        System.out.print("Метод покоодинатного спуску    f(x) = " + f(x_int) + " x1 = " + x_int[0] + " x2 = " + x_int[1] + " k = " + k);
     }
 }

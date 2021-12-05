@@ -10,8 +10,8 @@ public class Lab6Test {
     @Test
     void solve() {
         int n = 2;
-        double[] x0 = {0, 0};
-        double eps = 0.0001;
+        double[] x0 = {-2, 1};
+        double eps = 0.001;
         double h = 2;
         double lambda = 0.8;
 
@@ -36,7 +36,7 @@ public class Lab6Test {
 
     public double f2(double[] x) {
         fCallCount += 1;
-        return (5 * x[0] * x[0]) + (x[0] * x[1]) + (25 * x[1] * x[1]) - (4 * x[0] + 6 * x[1]);
+        return (5 * x[0] * x[0]) + (x[0] * x[1]) + (25 * x[1] * x[1]) - (4 * x[0]) + (6 * x[1]);
     }
 
     public double f1(double[] x) {
@@ -47,7 +47,7 @@ public class Lab6Test {
     public static double[] grad_f2(double[] x) {
         return new double[]{
                 (10 * x[0]) + x[1] - 4,
-                x[0] + (50 * x[1]) - 6
+                x[0] + (50 * x[1]) + 6
         };
     }
 
@@ -62,12 +62,12 @@ public class Lab6Test {
 
         @Override
         public double f(double[] x) {
-            return f1(x);
+            return f2(x);
         }
 
         @Override
         public double[] grad_f(double[] x) {
-            return grad_f1(x);
+            return grad_f2(x);
         }
     }
 
@@ -75,12 +75,12 @@ public class Lab6Test {
 
         @Override
         public double f(double[] x) {
-            return f1(x);
+            return f2(x);
         }
 
         @Override
         public double[] grad_f(double[] x) {
-            return grad_f1(x);
+            return grad_f2(x);
         }
     }
 
@@ -88,7 +88,7 @@ public class Lab6Test {
 
         @Override
         public double f(double[] x) {
-            return f1(x);
+            return f2(x);
         }
     }
 

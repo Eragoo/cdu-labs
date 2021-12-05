@@ -5,6 +5,8 @@ import org.apache.commons.math3.linear.ArrayRealVector;
 import java.util.Arrays;
 
 public abstract class МетодНайшвидшогоСпуску {
+    private int k = 0;
+
     public abstract double f(double[] x);
 
     public abstract double[] grad_f(double[] x0);
@@ -12,16 +14,18 @@ public abstract class МетодНайшвидшогоСпуску {
     public void solve(double[] x0, int n, double h0, double eps) {
         double[] g = grad_f(x0);
         if (new ArrayRealVector(g).getNorm() <= eps) {
-            System.out.print("Метод найшвидшого спуску    f(x) = " + f(x0) + " x1 = " + x0[0] + " x2 = " + x0[1]);
+            System.out.print("Метод найшвидшого спуску    f(x) = " + f(x0) + " x1 = " + x0[0] + " x2 = " + x0[1] + " k = " + k);
             return;
         }
 
         double xSubX0Norm;
         do {
+            k++;
             double[] x = Arrays.copyOf(x0, x0.length);
             double h = find_h(x, g, h0, eps);
 
             for (int i = 0; i < n; i++) {
+                k++;
                 x0[i] = x[i] - (h * g[i]);
             }
 
@@ -30,7 +34,7 @@ public abstract class МетодНайшвидшогоСпуску {
             xSubX0Norm = new ArrayRealVector(x).subtract(new ArrayRealVector(x0)).getNorm();
         } while (!(xSubX0Norm < eps || new ArrayRealVector(g).getNorm() < eps));
 
-        System.out.print("Метод найшвидшого спуску    f(x) = " + f(x0) + " x1 = " + x0[0] + " x2 = " + x0[1]);
+        System.out.print("Метод найшвидшого спуску    f(x) = " + f(x0) + " x1 = " + x0[0] + " x2 = " + x0[1] + " k = " + k);
     }
 
     public double find_h(double[] x0, double[] g, double h0, double eps) {
@@ -40,9 +44,11 @@ public abstract class МетодНайшвидшогоСпуску {
         double f2;
 
         do {
+            k++;
             h0 = h0 / 2;
 
             for (int i = 0; i < x0.length; i++) {
+                k++;
                 x2[i] = x0[i] - (h0 * g[i]);
             }
 
@@ -57,11 +63,13 @@ public abstract class МетодНайшвидшогоСпуску {
         double[] x1;
 
         do {
+            k++;
             x1 = Arrays.copyOf(x2, x2.length);;
             f1 = f2;
             h = h + h0;
 
             for (int i = 0; i < x1.length; i++) {
+                k++;
                 x2[i] = x1[i] - (h * g[i]);
             }
             f2 = f(x2);
@@ -74,10 +82,12 @@ public abstract class МетодНайшвидшогоСпуску {
         double sigma = eps / 3;
 
         do {
+            k++;
             double h1 = (ha + hb - sigma) / 2;
             double h2 = (ha + hb + sigma) / 2;
 
             for (int i = 0; i < x0.length; i++) {
+                k++;
                 x1[i] = x0[i] - (h1 * g[i]);
                 x2[i] = x0[i] - (h2 * g[i]);
             }

@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">mobileLab1</string>
+    <string name="my_own_text">Counter value: %d</string>
+    <string name="button">Button</string>
+    <string name="counter_value_0">Counter value: 0</string>
+</resources>

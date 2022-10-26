@@ -4,7 +4,7 @@ import scala.swing._
 import scala.swing.event.ButtonClicked
 
 class UI extends MainFrame {
-  title = "GUI Program #1"
+  title = "Кухоль ТЗІ Лаб 3"
   preferredSize = new Dimension(320, 240)
 
   val myText: TextField = new TextField() {

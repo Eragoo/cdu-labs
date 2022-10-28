@@ -33,6 +33,8 @@ class UI extends MainFrame {
 
   contents = new FlowPanel(myText, encodeButton, decodeButton, result)
 
+  val code = "aersdtfhjgkhlhjgfd"
+
   val alphabet: Array[Array[String]] = Array(
     Array("a", "b", "c", "d", "e", ","),
     Array("f", "g", "h", "i", "j", ":"),

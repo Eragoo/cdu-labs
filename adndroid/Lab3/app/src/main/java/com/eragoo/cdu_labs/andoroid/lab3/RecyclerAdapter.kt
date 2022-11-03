@@ -5,6 +5,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.eragoo.cdu_labs.andoroid.lab3.dal.UserDto
 
 class RecyclerAdapter(private val data: List<UserDto>) : RecyclerView.Adapter<RecyclerAdapter.MyViewHolder>() {
     class MyViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView){

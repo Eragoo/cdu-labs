@@ -31,8 +31,13 @@ android {
         jvmTarget = '1.8'
     }
 }
+apply plugin: 'kotlin-kapt'
 
 dependencies {
+    def room_version = "2.4.0-alpha03" // check latest version from docs
+
+    implementation "androidx.room:room-ktx:$room_version"
+    kapt "androidx.room:room-compiler:$room_version"
 
     implementation 'androidx.core:core-ktx:1.7.0'
     implementation 'androidx.appcompat:appcompat:1.5.1'

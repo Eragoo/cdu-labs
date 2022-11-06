@@ -1,4 +1,4 @@
-package com.eragoo.cdu_labs.andoroid.lab3.dal
+package com.eragoo.cdu_labs.andoroid.lab3.model
 
 import android.content.Context
 import androidx.room.Database

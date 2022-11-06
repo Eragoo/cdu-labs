@@ -1,5 +1,6 @@
-package com.eragoo.cdu_labs.andoroid.lab3.dal
+package com.eragoo.cdu_labs.andoroid.lab3.model
 
+import androidx.lifecycle.LiveData
 import androidx.room.Dao
 import androidx.room.Delete
 import androidx.room.Insert
@@ -8,7 +9,7 @@ import androidx.room.Query
 @Dao
 interface UserDao {
     @Query("SELECT * FROM user")
-    fun getAll(): List<User>
+    suspend fun getAll(): List<User>
 
     @Query("SELECT * FROM user WHERE uid IN (:userIds)")
     fun loadAllByIds(userIds: IntArray): List<User>
@@ -22,4 +23,10 @@ interface UserDao {
 
     @Delete
     fun delete(user: User)
+
+    @Query("Delete FROM user where uid = :id")
+    fun deleteById(id: String)
+
+    @Query("SELECT * FROM user")
+    fun getAllUsersLiveData() : LiveData<List<User>>
 }

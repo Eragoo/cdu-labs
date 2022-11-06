@@ -9,31 +9,16 @@ class UI extends MainFrame {
   title = "Кухоль Лаб 2"
   preferredSize = new Dimension(700, 500)
 
-  val myText: TextField = new TextField() {
-    columns = 20
-    text = "Hello, World!"
-    enabled = true
-  }
+  val createChart = ChartFactory.createBarChart(
+    "Bar Chart Example", //Chart Title
+    "Year", // Category axis
+    "Population in Million", // Value axis
+    dataset,
+    PlotOrientation.VERTICAL,
+    true,true,false
+  );
 
-  val result: Label = new Label()
-
-  val encodeButton: Button = new Button {
-    text = "Encode"
-    enabled = true
-    reactions += {
-      case ButtonClicked(_) => result.text = encode(myText.text)
-    }
-  }
-
-  val decodeButton: Button = new Button {
-    text = "Decode"
-    enabled = true
-    reactions += {
-      case ButtonClicked(_) => result.text = decode(myText.text)
-    }
-  }
-
-  contents = new FlowPanel(myText, encodeButton, decodeButton, result)
+  contents = new FlowPanel()
 }
 
 object Main {

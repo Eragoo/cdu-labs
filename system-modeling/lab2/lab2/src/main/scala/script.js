@@ -2,7 +2,7 @@ class BarChart {
     constructor(options) {
         this.options = options;
         this.canvas = options.canvas;
-        this.ctx = this.canvas.getContext("2d");
+        this.ctx = options.ctx;
         this.colors = options.colors;
         this.titleOptions = options.titleOptions;
         this.maxValue = Math.max(...Object.values(this.options.data));
@@ -59,7 +59,6 @@ class BarChart {
 
         for (let val of values) {
             var barHeight = Math.round((canvasActualHeight * val) / this.maxValue);
-            console.log(barHeight);
 
             drawBar(
                 this.ctx,
@@ -98,9 +97,9 @@ function drawBar(ctx, upperLeftCornerX, upperLeftCornerY, width, height, color) 
 }
 
 class LinearCongurentRandom {
-    x0 = 3451
-    k = 1314
-    c = 513
+    x0 = Date.now() * 1
+    k = Date.now() * 1
+    c = Date.now() * 1
 
     next(start, end) {
         this.x0 = (this.k * this.x0 + this.c) % (end + 1)
@@ -110,7 +109,7 @@ class LinearCongurentRandom {
 }
 
 class NeimansRandom {
-    x0 = 3451280;
+    x0 = Date.now() * 1;
 
     next(start, end) {
         let square = this.x0 * this.x0
@@ -128,83 +127,104 @@ function getDefaultRandomInt(min, max) {
 
 
 //main
-var defaultC = document.getElementById("default");
+let defaultC = document.getElementById("default");
 defaultC.width = 500;
 defaultC.height = 500;
 
-var neiman = document.getElementById("neiman");
+let neiman = document.getElementById("neiman");
 neiman.width = 500;
 neiman.height = 500;
 
-var linear = document.getElementById("linear");
+let linear = document.getElementById("linear");
 linear.width = 500;
 linear.height = 500;
 
-let neimansRandom = new NeimansRandom();
-let linearCongurentRandom = new LinearCongurentRandom();
 
-let iterations = 100;
-let start = 0;
-let end = 100;
-let barNumber = 5;
-let step = (end - start) / barNumber
-let gridScale = iterations / 10 === 0 ? 1 : iterations / 10;
+let contextD = defaultC.getContext("2d");
+let contextN = neiman.getContext("2d");
+let contextL = linear.getContext("2d");
 
-let defaultData = [];
-let neimansData = [];
-let linearCongurentData = [];
+let doMagic = () => {
+    let neimansRandom = new NeimansRandom();
+    let linearCongurentRandom = new LinearCongurentRandom();
 
-Math.random();
-for (let i = 0; i < iterations; i++) {
-    defaultData.push(getDefaultRandomInt(start, end));
-    neimansData.push(neimansRandom.next(start, end));
-    linearCongurentData.push(linearCongurentRandom.next(start, end));
-}
+    contextD.clearRect(0, 0, defaultC.width, defaultC.height);
+    contextN.clearRect(0, 0, defaultC.width, defaultC.height);
+    contextL.clearRect(0, 0, defaultC.width, defaultC.height);
 
-function process(defaultData, start, end, step) {
-    let data = {}
-    for (let i = start; i < end; i += step) {
-        data[i.toString()] = 0;
+    let iterations = document.getElementById("try").value || 10;
+    let start = document.getElementById("from").value || 0;
+    let end = document.getElementById("to").value || 100;
+    let barNumber = document.getElementById("count").value || 5;
+    let step = (end - start) / barNumber
+    let gridScale = iterations / 10 === 0 ? 1 : iterations / 10;
+
+    let defaultData = [];
+    let neimansData = [];
+    let linearCongurentData = [];
+
+    Math.random();
+    for (let i = 0; i < iterations; i++) {
+        defaultData.push(getDefaultRandomInt(start, end));
+        neimansData.push(neimansRandom.next(start, end));
+        linearCongurentData.push(linearCongurentRandom.next(start, end));
     }
-    for (let i = 0; i < defaultData.length; i++) {
-        for (let j = start; j <= end; j += step) {
-            if (defaultData[i] >= j && defaultData[i] < j + step) {
-                data[j.toString()]++;
+
+    function process(defaultData, start, end, step) {
+        let data = {}
+        for (let i = 0; i < end; i += step) {
+            data[i.toString()] = 0;
+        }
+        for (let i = 0; i < defaultData.length; i++) {
+            for (let j = 0; j <= end; j += step) {
+                if (defaultData[i] >= j && defaultData[i] < j + step) {
+                    data[j.toString()]++;
+                }
             }
         }
+        return data;
     }
-    return data;
+
+    let processedDefault = process(defaultData, start, end, step);
+    let processedNeiman = process(neimansData, start, end, step);
+    let processedLinear = process(linearCongurentData, start, end, step);
+
+    var defaultChart = new BarChart({
+        canvas: defaultC,
+        ctx: contextD,
+        padding: 100,
+        gridScale: gridScale,
+        gridColor: "black",
+        data: processedDefault,
+        colors: ["#a55ca5", "#67b6c7", "#bccd7a", "#eb9743", "#bbbbbb"],
+    });
+    var neimanChart = new BarChart({
+        canvas: neiman,
+        ctx: contextN,
+        padding: 100,
+        gridScale: gridScale,
+        gridColor: "black",
+        data: processedNeiman,
+        colors: ["#a55ca5", "#67b6c7", "#bccd7a", "#eb9743", "#bbbbbb"],
+    });
+    var linearChart = new BarChart({
+        canvas: linear,
+        ctx: contextL,
+        padding: 100,
+        gridScale: gridScale,
+        gridColor: "black",
+        data: processedLinear,
+        colors: ["#a55ca5", "#67b6c7", "#bccd7a", "#eb9743", "#bbbbbb"],
+    });
+
+    document.getElementById("values1").innerHTML = defaultData.map(x => Math.round(x)).join("</br>")
+    document.getElementById("values2").innerHTML = neimansData.map(x => Math.round(x)).join("</br>")
+    document.getElementById("values3").innerHTML = linearCongurentData.map(x => Math.round(x)).join("</br>")
+
+    defaultChart.draw();
+    neimanChart.draw();
+    linearChart.draw();
 }
 
-let processedDefault = process(defaultData, start, end, step);
-let processedNeiman = process(neimansData, start, end, step);
-let processedLinear = process(linearCongurentData, start, end, step);
-
-var defaultChart = new BarChart({
-    canvas: defaultC,
-    padding: 100,
-    gridScale: gridScale,
-    gridColor: "black",
-    data: processedDefault,
-    colors: ["#a55ca5", "#67b6c7", "#bccd7a", "#eb9743", "#bbbbbb"],
-});
-var neimanChart = new BarChart({
-    canvas: neiman,
-    padding: 100,
-    gridScale: gridScale,
-    gridColor: "black",
-    data: processedNeiman,
-    colors: ["#a55ca5", "#67b6c7", "#bccd7a", "#eb9743", "#bbbbbb"],
-});
-var linearChart = new BarChart({
-    canvas: linear,
-    padding: 100,
-    gridScale: gridScale,
-    gridColor: "black",
-    data: processedLinear,
-    colors: ["#a55ca5", "#67b6c7", "#bccd7a", "#eb9743", "#bbbbbb"],
-});
-
-defaultChart.draw();
-neimanChart.draw();
-linearChart.draw();
+doMagic();
+document.getElementById("start-new").onclick = doMagic;

@@ -3,40 +3,73 @@
 <head>
     <meta charset="UTF-8">
     <title>Lab 2</title>
+    <style>
+        body {
+            font-family: sans-serif;
+        }
+
+        .graphs {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+        }
+
+        .graph-values {
+            border: black solid 1px;
+            border-radius: 10px;
+        }
+    </style>
 </head>
 <body>
 <div class="graphs">
     <div class="chart 1">
         <div class="graph">
-            Default method:
+            <h2>Default method</h2>
             <canvas id="default"></canvas>
         </div>
         <div class="graph-values">
+            <h2>Значення</h2>
+            <div id="values1" style="overflow:scroll; height:250px;">
 
+            </div>
         </div>
     </div>
-        <div class="chart 2">
-            <div class="graph">
-                Neiman method:
-                <canvas id="neiman"></canvas>
-            </div>
-            <div class="graph-values">
-
+    <div class="chart 2">
+        <div class="graph">
+            <h2>Neiman method</h2>
+            <canvas id="neiman"></canvas>
+        </div>
+        <div class="graph-values">
+            <h2>Значення</h2>
+            <div id="values2" style="overflow:scroll; height:250px;">
             </div>
         </div>
-        <div class="chart 3">
-            <div class="graph">
-                Linear method:
-                <canvas id="linear"></canvas>
-            </div>
-            <div class="graph-values">
+    </div>
+    <div class="chart 3">
+        <div class="graph">
+            <h2>Linear method</h2>
+            <canvas id="linear"></canvas>
+        </div>
+        <div class="graph-values">
+            <h2>Значення</h2>
+            <div id="values3" style="overflow:scroll; height:250px;">
 
             </div>
         </div>
     </div>
     <div class="settings">
-
+        <h2>Від <input type="text" value="0" id="from" style="width: 50px"> До <input id="to" value="100" type="text"
+                                                                                      style="width: 50px"></h2>
+        </br></br></br></br>
+        <h2>К-ть проміжків</h2>
+        <input type="text" value="5" id="count" style="width: 100px">
+        </br></br></br></br>
+        <h2>К-ть випробувань</h2>
+        <input type="text" id="try" value="10" style="width: 100px">
+        </br></br></br></br>
+        <input id = "start-new" type="button" value="Нове випробування">
     </div>
+</div>
 <script type="text/javascript" src="script.js"></script>
 </body>
 </html>

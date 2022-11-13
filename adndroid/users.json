@@ -1,0 +1,22 @@
+[
+   {
+      "firstName":"Eugene",
+      "lastName":"Kukhol",
+      "email":"eugene@uk.com"
+   },
+   {
+      "firstName":"Oleg",
+      "lastName":"Olegov",
+      "email":"olev@uk.com"
+   },
+   {
+      "firstName":"Adnrew",
+      "lastName":"Adnreew",
+      "email":"adnrew@uk.com"
+   },
+   {
+      "firstName":"Olga",
+      "lastName":"Olgrew",
+      "email":"olga@uk.com"
+   }
+]

@@ -4,6 +4,7 @@ import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 
+//https://raw.githubusercontent.com/Eragoo/cdu-labs/master/adndroid/users.json
 @Entity
 data class User(
     @PrimaryKey val uid: String,

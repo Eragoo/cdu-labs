@@ -27,6 +27,9 @@ interface UserDao {
     @Query("Delete FROM user where uid = :id")
     fun deleteById(id: String)
 
+    @Query("Delete FROM user ")
+    fun deleteAll()
+
     @Query("SELECT * FROM user")
     fun getAllUsersLiveData() : LiveData<List<User>>
 }

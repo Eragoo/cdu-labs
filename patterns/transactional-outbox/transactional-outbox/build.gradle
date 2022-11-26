@@ -1,0 +1,55 @@
+plugins {
+    id 'org.springframework.boot' version '2.5.2'
+    id 'io.spring.dependency-management' version '1.0.11.RELEASE'
+    id 'java'
+}
+
+group = 'com.Eragoo'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '17'
+
+configurations {
+    compileOnly {
+        extendsFrom annotationProcessor
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'com.vladmihalcea:hibernate-types-52:2.14.0'
+
+    implementation 'org.springframework.boot:spring-boot-starter-amqp'
+    implementation "io.springfox:springfox-bean-validators:2.9.2"
+    implementation "io.springfox:springfox-swagger2:2.9.2"
+    implementation "io.springfox:springfox-swagger-ui:2.9.2"
+
+    implementation "org.springframework.boot:spring-boot-starter-validation"
+
+    implementation 'net.logstash.logback:logstash-logback-encoder:7.0.1'
+
+    implementation 'org.apache.commons:commons-collections4:4.4'
+    implementation "org.apache.commons:commons-lang3"
+
+    implementation ('org.springframework.boot:spring-boot-starter-web') {
+        exclude module: "spring-boot-starter-tomcat"
+    }
+    implementation "org.springframework.boot:spring-boot-starter-jetty"
+
+
+    implementation "io.jsonwebtoken:jjwt:0.9.1"
+    implementation 'com.auth0:java-jwt:3.18.3'
+
+
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+    runtimeOnly 'org.postgresql:postgresql'
+
+    compileOnly 'org.projectlombok:lombok'
+    annotationProcessor 'org.projectlombok:lombok'
+}
+
+tasks.named('test') {
+    useJUnitPlatform()
+}

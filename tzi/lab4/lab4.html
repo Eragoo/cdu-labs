@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div>
+        <h2>К-ть спроб: <span id="attempts">0</span></h2>
+        <h2 id="greeting">Вітаю, гість! </br> Задайте пароль:</h2>
+        <label>
+            <input type="text"/>
+            <button id="done">Done</button>
+        </label>
+
+        <div id="secret content"></div>
+    </div>
+
+<script>
+    let attempts = 0;
+    let attemptsElement = document.getElementById('attempts');
+    let secretContent = document.getElementById('secret content');
+    let input = document.querySelector('input');
+    let button = document.querySelector('button');
+    let greeting = document.getElementById('greeting');
+    let isGuest = true;
+    let pass = '123456';
+
+    button.addEventListener('click', function () {
+        if (attempts > 6) {
+            alert('You are blocked');
+            return;
+        }
+
+        if (isGuest && input.value.length < 6) {
+            alert('Пароль має бути не менше 6 символів');
+            return;
+        }
+
+        if (isGuest) {
+            pass = input.value;
+            isGuest = false;
+            alert('Пароль встановлено!');
+        }
+
+        if (input.value === pass) {
+            attempts = 0;
+            greeting.innerText = "Ви вже були тут! Введіть свій пароль:";
+            secretContent.innerText = 'Secret content';
+        } else {
+            attempts++;
+            secretContent.innerText = '';
+            alert('Невірний пароль');
+        }
+        attemptsElement.innerText = attempts;
+    });
+</script>
+</body>
+</html>

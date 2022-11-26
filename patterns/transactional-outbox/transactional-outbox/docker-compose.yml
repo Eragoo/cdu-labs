@@ -3,7 +3,6 @@ services:
   db-core:
     image: postgres:13
     container_name: db-core
-    restart: always
     environment:
       - POSTGRES_USER=core_dbu
       - POSTGRES_PASSWORD=pass
@@ -14,7 +13,6 @@ services:
   mq:
     image: registry.hub.docker.com/library/rabbitmq:3.7-management
     container_name: rabbit-mq
-    restart: always
     environment:
       RABBITMQ_ERLANG_COOKIE: "SWQOKODSQALRPCLNMEQG"
       RABBITMQ_DEFAULT_USER: "root"
@@ -24,3 +22,14 @@ services:
       - 15672:15672
       - 5672:5672
 
+  core-service:
+    build: .
+    container_name: core-service
+    environment:
+        - DB_HOST=db-core
+        - DB_PORT=5432
+        - DB_USER=core_dbu
+        - DB_PASS=pass
+        - RABBITMQ_HOST=mq
+    ports:
+      - 8000:8000

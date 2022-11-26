@@ -18,6 +18,10 @@ repositories {
     mavenCentral()
 }
 
+bootJar {
+    archiveName = "core.jar"
+}
+
 dependencies {
     implementation 'com.vladmihalcea:hibernate-types-52:2.14.0'
 

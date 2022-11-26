@@ -14,11 +14,14 @@ public class OutboxEventSendService {
 
     @Transactional
     public void sendEvent(Long outboxId) {
-        if (outboxId == null) return;
-        outboxRepository.findById(outboxId)
-                .ifPresent(outbox -> {
-                    eventSender.send(outbox.getEvent());
-                    outbox.setProcessed(true);
-                });
+        try {
+            outboxRepository.findById(outboxId)
+                    .ifPresent(outbox -> {
+                        eventSender.send(outbox.getEvent());
+                        outbox.setProcessed(true);
+                    });
+        } catch (Exception e) {
+            System.err.println("Error while sending event: " + e.getMessage());
+        }
     }
 }

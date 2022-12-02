@@ -14,9 +14,9 @@ public class StatisticResource {
     public final StatisticService statisticService;
 
     @GetMapping("/money-received")
-    public void currentState(
+    public String currentState(
             String lookBack
     ) {
-        statisticService.getEventsState(lookBack);
+        return statisticService.getEventsState(lookBack);
     }
 }

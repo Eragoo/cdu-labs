@@ -21,6 +21,9 @@ import java.util.*;
 @AllArgsConstructor
 public class StatisticService {
     private final ObjectMapper objectMapper;
+
+    //add several monitoring nodes in docker-compose.yml
+    //todo split and save in backet per minute
     private final TreeSet<PaymentCreatedEvent> eventsState = new TreeSet<>(Comparator.comparing(PaymentCreatedEvent::getCreatedAt));
 
     @PostConstruct

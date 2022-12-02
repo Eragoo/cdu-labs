@@ -21,6 +21,7 @@ class RabbitConfig {
     static final String EVENT_TYPE_HEADER = "EVENT_TYPE";
     private static final String DEFAULT_EXCHANGE_NAME = "default";
 
+    //todo use that exchange
     @Bean
     FanoutExchange defaultExchange() {
         return new FanoutExchange(DEFAULT_EXCHANGE_NAME);

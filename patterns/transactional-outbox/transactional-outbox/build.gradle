@@ -25,7 +25,6 @@ bootJar {
 dependencies {
     implementation 'com.vladmihalcea:hibernate-types-52:2.14.0'
 
-    implementation 'org.springframework.boot:spring-boot-starter-amqp'
     implementation "io.springfox:springfox-bean-validators:2.9.2"
     implementation "io.springfox:springfox-swagger2:2.9.2"
     implementation "io.springfox:springfox-swagger-ui:2.9.2"

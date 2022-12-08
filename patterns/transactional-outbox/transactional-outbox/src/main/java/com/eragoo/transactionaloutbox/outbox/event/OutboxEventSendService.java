@@ -18,7 +18,7 @@ public class OutboxEventSendService {
             outboxRepository.findById(outboxId)
                     .ifPresent(outbox -> {
                         eventSender.send(outbox.getEvent());
-                        outbox.setProcessed(true);
+                        outboxRepository.delete(outbox);
                     });
         } catch (Exception e) {
             System.err.println("Error while sending event: " + e.getMessage());

@@ -9,18 +9,8 @@ services:
       - POSTGRES_DB=core
     ports:
       - 5432:5432
-
-  mq:
-    image: registry.hub.docker.com/library/rabbitmq:3.7-management
-    container_name: rabbit-mq
-    environment:
-      RABBITMQ_ERLANG_COOKIE: "SWQOKODSQALRPCLNMEQG"
-      RABBITMQ_DEFAULT_USER: "root"
-      RABBITMQ_DEFAULT_PASS: "root"
-      RABBITMQ_DEFAULT_VHOST: "/"
-    ports:
-      - 15672:15672
-      - 5672:5672
+    networks:
+      - transactional-net
 
   core-service:
     build: .
@@ -33,3 +23,64 @@ services:
         - RABBITMQ_HOST=mq
     ports:
       - 8000:8000
+    depends_on:
+      - kafka-connect
+    networks:
+      - transactional-net
+
+  zookeeper:
+    image: quay.io/debezium/zookeeper:1.9
+    container_name: zookeeper
+    ports:
+      - 2181:2181
+      - 2888:2888
+    networks:
+      - transactional-net
+
+  kafka:
+    image: quay.io/debezium/kafka:1.9
+    container_name: kafka
+    ports:
+      - 9092:9092
+    links:
+      - zookeeper:zookeeper
+    depends_on:
+      - zookeeper
+    networks:
+      - transactional-net
+
+  kafka-connect:
+    image: quay.io/debezium/connect:1.9
+    container_name: kafka-connect
+    ports:
+      - 8083:8083
+    links:
+      - zookeeper:zookeeper
+      - kafka:kafka
+      - db-core:db-core
+    environment:
+      - BOOTSTRAP_SERVERS=kafka:9092
+      - GROUP_ID=1
+      - CONFIG_STORAGE_TOPIC=my_connect_configs
+      - OFFSET_STORAGE_TOPIC=my_connect_offsets
+      - STATUS_STORAGE_TOPIC=my_connect_statuses
+#      - KEY_CONVERTER=org.apache.kafka.connect.storage.StringConverter
+#      - VALUE_CONVERTER=org.apache.kafka.connect.json.JsonConverter
+#      - KEY_CONVERTER_SCHEMAS_ENABLE=false
+#      - VALUE_CONVERTER_SCHEMAS_ENABLE=false
+#      - CONFIG_STORAGE_REPLICATION_FACTOR=1
+#      - OFFSET_STORAGE_REPLICATION_FACTOR=1
+#      - STATUS_STORAGE_REPLICATION_FACTOR=1
+#      - KAFKA_CONNECT_JDBC_DIR=/kafka/libs
+#      - KAFKA_CONNECT_JDBC_PLUGIN_DIR=/kafka/libs
+#      - CONNECT_PLUGIN_PATH=/kafka/libs
+    depends_on:
+      - zookeeper
+      - kafka
+      - db-core
+    networks:
+      - transactional-net
+
+networks:
+  transactional-net:
+    driver: bridge

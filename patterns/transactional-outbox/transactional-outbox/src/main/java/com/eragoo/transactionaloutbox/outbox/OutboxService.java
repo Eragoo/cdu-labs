@@ -17,7 +17,9 @@ public class OutboxService {
     public <T> void save(T event) {
         try {
             String eventJson = objectMapper.writeValueAsString(event);
-            outboxRepository.save(new Outbox(eventJson));
+            Outbox eventDb = new Outbox(eventJson);
+            outboxRepository.save(eventDb);
+            outboxRepository.delete(eventDb);
         } catch (JsonProcessingException e) {
             throw new RuntimeException(e);
         }

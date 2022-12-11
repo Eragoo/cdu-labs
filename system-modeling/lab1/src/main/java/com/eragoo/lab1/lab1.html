@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lab2</title>
+</head>
+<body>
+<script>
+    let r = [1, 3];
+    let rn = 2;
+    let p22 = 0.2;
+    let p21 = 0.8;
+    let p11 = 1;
+    let oDivMu = 0.8;
+    let tDivMu = 0.3;
+    let N = 20;
+
+
+    let pMatrix = [[p11, 0], [p21, p22]];
+    let muVector = [oDivMu, tDivMu];
+
+
+    //середня к-ть заявок у черзы
+    let L = [0, 0];
+    for (let i = 0; i < rn; i++) {
+        let ri = r[i];
+        for (let j = ri + 1; j <= N; j++) {
+            L[i] += ((j - ri) * (pMatrix[i][j] ? pMatrix[i][j] : 0));
+        }
+    }
+
+    //середня к-ть занятих пристроїв
+    let R = [r[0], r[1]];
+    for (let i = 0; i < rn; i++) {
+        let ri = r[i];
+        for (let j = 0; j <= ri - 1; j++) {
+            R[i] -= ri - j * (pMatrix[i][j] ? pMatrix[i][j] : 0);
+        }
+    }
+
+    //середня к-ть заявок у смо
+    let M = [0, 0];
+    for (let i = 0; i < rn; i++) {
+        M[i] = L[i] + R[i];
+    }
+
+    //інтенсивність вихідного потоку заявок
+    let lambda = [0, 0];
+    for (let i = 0; i < rn; i++) {
+        lambda[i] = R[i] / muVector[i];
+    }
+
+    //середній час перебування заявки у смо
+    let T = [0, 0];
+    for (let i = 0; i < rn; i++) {
+        T[i] = M[i] / lambda[i];
+    }
+
+    //середній час очікування заявки у черзі
+    let Q = [0, 0];
+    for (let i = 0; i < rn; i++) {
+        Q[i] = L[i] / lambda[i];
+    }
+
+    console.log("L = " + L);
+    console.log("R = " + R);
+    console.log("M = " + M);
+    console.log("lambda = " + lambda);
+    console.log("T = " + T);
+    console.log("Q = " + Q);
+
+</script>
+</body>
+</html>
